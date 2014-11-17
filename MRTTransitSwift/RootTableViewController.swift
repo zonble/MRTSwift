@@ -3,8 +3,8 @@ import UIKit
 class RootTableViewController :UITableViewController {
 	var from :String?
 	var to: String?
-	var fromPicker = ExitPicker(style: .Grouped)
-	var toPicker = ExitPicker(style: .Grouped)
+	var fromPicker = ExitPicker(style: .Plain)
+	var toPicker = ExitPicker(style: .Plain)
 	var suggestedRoutes = [(String, MRTRoute)]()
 	var onewayFare :Int32?
 	var easycardFare :Int32?

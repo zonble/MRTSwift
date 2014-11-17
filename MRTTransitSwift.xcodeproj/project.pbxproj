@@ -31,6 +31,7 @@
 		D4D70BC61A1A40F10024B070 /* MRTPriceDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D70BC41A1A40F10024B070 /* MRTPriceDatabase.swift */; };
 		D4D70BCA1A1A433A0024B070 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D70BC91A1A433A0024B070 /* libsqlite3.dylib */; };
 		D4D70BCD1A1A43460024B070 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D70BC91A1A433A0024B070 /* libsqlite3.dylib */; };
+		D4D9A2531A1A6C7C005D6C27 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D4D9A2521A1A6C7C005D6C27 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		D4D70BC41A1A40F10024B070 /* MRTPriceDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRTPriceDatabase.swift; sourceTree = "<group>"; };
 		D4D70BC81A1A425C0024B070 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		D4D70BC91A1A433A0024B070 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		D4D9A2521A1A6C7C005D6C27 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 		D4BF109D1A18EB10008CF67E /* MRTTransitSwift */ = {
 			isa = PBXGroup;
 			children = (
+				D4D9A2521A1A6C7C005D6C27 /* InfoPlist.strings */,
 				D4BF10A01A18EB10008CF67E /* AppDelegate.swift */,
 				D4C8DC5D1A18F701009D7F66 /* RootTableViewController.swift */,
 				D41A5C411A190759005D110B /* RouteTableViewController.swift */,
@@ -246,6 +249,7 @@
 				D4D70BC01A1A40930024B070 /* data.sqlite in Resources */,
 				D4BF10AB1A18EB10008CF67E /* LaunchScreen.xib in Resources */,
 				D4BF10A81A18EB10008CF67E /* Images.xcassets in Resources */,
+				D4D9A2531A1A6C7C005D6C27 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
