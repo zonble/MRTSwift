@@ -37,8 +37,9 @@ class ExitPicker :UITableViewController {
 	}
 
 	override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-		self.selectedIndexPath = indexPath
 		tableView.deselectRowAtIndexPath(indexPath, animated: true)
+		self.selectedIndexPath = indexPath
+		self.tableView.reloadData()
 		let lineID = "\(indexPath.section + 1)"
 		let exitNames = MRTMap.sharedMap.tracks[lineID]!
 		self.delegate?.exitPicker(self, didSelectStationName: exitNames[indexPath.row])
