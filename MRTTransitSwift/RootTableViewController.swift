@@ -9,6 +9,7 @@ class RootTableViewController :UITableViewController {
 	var onewayFare :Int32?
 	var easycardFare :Int32?
 	var reducedFare :Int32?
+	var time :Int32?
 	var formatter = NSNumberFormatter()
 
 	override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
@@ -49,7 +50,7 @@ class RootTableViewController :UITableViewController {
 			return suggestedRoutes.count
 		}
 		if section == 3 {
-			return 3
+			return 4
 		}
 		return 1
 	}
@@ -75,11 +76,11 @@ class RootTableViewController :UITableViewController {
 				var (title, route) = self.suggestedRoutes[indexPath.row]
 				cell.textLabel.text = title
 				cell.accessoryType = .DisclosureIndicator
-				cell.detailTextLabel!.text = "共 \(route.links.count) 站，轉 \(route.transitions.count - 1)  次"
+				cell.detailTextLabel!.text = "共\(route.links.count)站，轉\(route.transitions.count - 1)次"
 			case 3:
 				cell.selectionStyle = .None
 				cell.accessoryType = .None
-				cell.textLabel.text = ["單程票", "悠遊卡", "敬老、愛心卡"][indexPath.row]
+				cell.textLabel.text = ["單程票", "悠遊卡", "敬老、愛心卡", "官方說的時間"][indexPath.row]
 				row: switch indexPath.row {
 				case 0:
 					cell.detailTextLabel!.text = onewayFare != nil ? formatter.stringFromNumber(Int(onewayFare!)) : ""
@@ -87,6 +88,8 @@ class RootTableViewController :UITableViewController {
 					cell.detailTextLabel!.text = easycardFare != nil ? formatter.stringFromNumber(Int(easycardFare!)) : ""
 				case 2:
 					cell.detailTextLabel!.text = reducedFare != nil ? formatter.stringFromNumber(Int(reducedFare!)) : ""
+				case 3:
+					cell.detailTextLabel!.text = time != nil ? "\(time!) 分" : ""
 				default:
 					break
 				}
@@ -177,11 +180,21 @@ extension RootTableViewController: ExitPickerDelegate {
 				self.suggestedRoutes.append(("轉乘最少路線", routeWithFewestTransitions))
 			}
 
+			if routesSortedByExitcount.count > 1 {
+				let crazyRoute = routesSortedByExitcount.last!
+				self.suggestedRoutes.append(("最遠路線…", crazyRoute))
+				let mostTransitionRoute = routesSortedByTransitionCount.last!
+				if crazyRoute !== mostTransitionRoute {
+					self.suggestedRoutes.append(("轉乘最多次…", mostTransitionRoute))
+				}
+			}
+
 			var fares = MRTPriceDatabase.sharedDatabase.price(self.from!, toStationName: self.to!)
-			var (v1, v2, v3, _) = fares[0]
+			var (v1, v2, v3, v4) = fares[0]
 			self.onewayFare = v1
 			self.easycardFare = v2
 			self.reducedFare = v3
+			self.time = v4
 			self.tableView.reloadData()
 		}
 
