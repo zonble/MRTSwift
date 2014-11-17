@@ -16,8 +16,21 @@ class MRTRoute {
 		for i in 1..<self.links.count {
 			let link = self.links[i]
 			if link.lineID != lastLineID {
-				transitionsArray.append(currentSection)
-				currentSection = [(String, MRTExit, MRTExit)]()
+				var connected = false
+				switch link.lineID {
+				case "4":
+					connected = (lastLineID == "4A" || lastLineID == "4B")
+				case "4A":
+					connected = lastLineID == "4"
+				case "4B":
+					connected = lastLineID == "4"
+				default:
+					break
+				}
+				if (!connected) {
+					transitionsArray.append(currentSection)
+					currentSection = [(String, MRTExit, MRTExit)]()
+				}
 			}
 			currentSection.append((link.lineID, links[i - 1].to, link.to))
 			lastLineID = link.lineID
