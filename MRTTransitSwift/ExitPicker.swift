@@ -6,6 +6,7 @@ protocol ExitPickerDelegate {
 
 class ExitPicker :UITableViewController {
 	var delegate :ExitPickerDelegate?
+	var selectedIndexPath :NSIndexPath?
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -31,10 +32,12 @@ class ExitPicker :UITableViewController {
 		let lineID = "\(indexPath.section + 1)"
 		let exitNames = MRTMap.sharedMap.tracks[lineID]!
 		cell.textLabel.text = exitNames[indexPath.row]
+		cell.accessoryType = self.selectedIndexPath? == indexPath ? .Checkmark : .None
 		return cell
 	}
 
 	override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+		self.selectedIndexPath = indexPath
 		tableView.deselectRowAtIndexPath(indexPath, animated: true)
 		let lineID = "\(indexPath.section + 1)"
 		let exitNames = MRTMap.sharedMap.tracks[lineID]!

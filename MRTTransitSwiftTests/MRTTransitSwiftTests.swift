@@ -1,11 +1,3 @@
-//
-//  MRTTransitSwiftTests.swift
-//  MRTTransitSwiftTests
-//
-//  Created by zonble on 11/16/14.
-//  Copyright (c) 2014 Weizhong Yang. All rights reserved.
-//
-
 import UIKit
 import XCTest
 
@@ -13,24 +5,30 @@ class MRTTransitSwiftTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock() {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
+
+	func testPriceDatabase() {
+		self.measureBlock { () -> Void in
+			let tracks = MRTMap.sharedMap.tracks
+			var names = [String]()
+			for trackID in tracks.keys {
+				let trackStationNames = tracks[trackID]
+				names += trackStationNames!
+			}
+			for name1 in names {
+				for name2 in names {
+					if name1 == name2 {
+						continue
+					}
+					let a = MRTPriceDatabase.sharedDatabase.price(name1, toStationName: name2)
+					assert(a.count == 1, "Must have a result")
+				}
+			}
+		}
+	}
+
 }
