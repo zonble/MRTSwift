@@ -30,6 +30,10 @@ class RootTableViewController :UITableViewController {
 		toPicker.delegate = self
 	}
 
+	deinit {
+		NSNotificationCenter.defaultCenter().removeObserver(self)
+	}
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		self.title = "台北捷運轉乘"
@@ -37,6 +41,7 @@ class RootTableViewController :UITableViewController {
 		self.navigationItem.backBarButtonItem = backItem
 		self.formatter.numberStyle = .CurrencyStyle
 		self.formatter.locale = NSLocale(localeIdentifier: "zh_Hant_TW")
+		NSNotificationCenter.defaultCenter().addObserver(self, selector:"announcementDidFinish:" , name: UIAccessibilityAnnouncementDidFinishNotification, object: nil)
 	}
 
 	override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -65,13 +70,16 @@ class RootTableViewController :UITableViewController {
 			cell.textLabel.textAlignment = .Left
 			cell.selectionStyle = .Blue
 			cell.detailTextLabel!.text = ""
+			cell.accessibilityHint = nil
 			section: switch indexPath.section {
 			case 0:
 				cell.textLabel.text = self.from ?? "尚未設定"
 				cell.accessoryType = .DisclosureIndicator
+				cell.accessibilityHint = "點擊設定路線起點"
 			case 1:
 				cell.textLabel.text = self.to ?? "尚未設定"
 				cell.accessoryType = .DisclosureIndicator
+				cell.accessibilityHint = "點擊設定路線終點"
 			case 2:
 				var (title, route) = self.suggestedRoutes[indexPath.row]
 				cell.textLabel.text = title
@@ -140,6 +148,14 @@ class RootTableViewController :UITableViewController {
 }
 
 extension RootTableViewController: ExitPickerDelegate {
+
+	func announcementDidFinish(notification: NSNotification) {
+		let cell = self.tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 2))
+		if let cell = cell {
+			UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, cell.contentView)
+		}
+	}
+
 	func exitPicker(picker: ExitPicker, didSelectStationName name:String) {
 		if picker == self.fromPicker {
 			self.from = name
@@ -148,12 +164,16 @@ extension RootTableViewController: ExitPickerDelegate {
 			self.to = name
 		}
 
-		func cal() {
+		if self.from == nil || self.to == nil {
+			self.dismissViewControllerAnimated(true, completion:{
+				self.tableView.reloadData()
+			})
+			return
+		}
+
+		self.dismissViewControllerAnimated(true, completion:{
 			self.suggestedRoutes.removeAll(keepCapacity: false)
 			self.tableView.reloadData()
-
-			if self.from == nil { return }
-			if self.to == nil { return }
 			var routes = MRTMap.sharedMap.findRoutes(self.from!, toID: self.to!)
 			if routes == nil { return }
 
@@ -171,10 +191,13 @@ extension RootTableViewController: ExitPickerDelegate {
 			})
 			let routeWithFewestExits = routesSortedByExitcount[0]
 			let routeWithFewestTransitions = routesSortedByTransitionCount[0]
+			var routeToSpeakOut :MRTRoute?
 			if (routeWithFewestExits === routeWithFewestTransitions) {
 				self.suggestedRoutes.append(("建議路線", routeWithFewestExits))
+				routeToSpeakOut = routeWithFewestExits
 			} else if (routeWithFewestExits.links.count == routeWithFewestTransitions.links.count) {
 				self.suggestedRoutes.append(("建議路線", routeWithFewestTransitions))
+				routeToSpeakOut = routeWithFewestTransitions
 			} else {
 				self.suggestedRoutes.append(("車站最少路線", routeWithFewestExits))
 				self.suggestedRoutes.append(("轉乘最少路線", routeWithFewestTransitions))
@@ -196,9 +219,16 @@ extension RootTableViewController: ExitPickerDelegate {
 			self.reducedFare = v3
 			self.time = v4
 			self.tableView.reloadData()
-		}
 
-		cal()
-		self.dismissViewControllerAnimated(true, completion:nil)
+			dispatch_after(UInt64(2 * NSEC_PER_SEC), dispatch_get_main_queue(), {
+				if self.suggestedRoutes.count == 0 {
+					return
+				}
+				var message = routeToSpeakOut != nil ?
+					"找到了建議路線，共 \(routeToSpeakOut!.links.count) 站，轉乘 \(routeToSpeakOut!.transitions.count - 1)  次":
+				"我們找到了車站最少與轉乘最少兩條路線"
+				UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, message)
+			})
+		})
 	}
 }
