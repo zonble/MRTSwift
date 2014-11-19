@@ -18,26 +18,44 @@ class MRTMap {
 	}
 
 	private func loadData() {
-		let path = NSBundle(forClass: MRTMap.self).pathForResource("data", ofType: "txt")
-		if path == nil { return }
-		let str = NSString(contentsOfFile: path!, encoding: NSUTF8StringEncoding, error: nil)
-		if str == nil { return }
+
+		let addressFilePath = NSBundle(forClass: MRTMap.self).pathForResource("address", ofType: "txt")
+		if addressFilePath == nil { return }
+		let addressData = NSString(contentsOfFile: addressFilePath!, encoding: NSUTF8StringEncoding, error: nil)
+		if addressData == nil { return }
+
+		let lineDataFilepath = NSBundle(forClass: MRTMap.self).pathForResource("data", ofType: "txt")
+		if lineDataFilepath == nil { return }
+		let lineData = NSString(contentsOfFile: lineDataFilepath!, encoding: NSUTF8StringEncoding, error: nil)
+		if lineData == nil { return }
 
 		var mapDict = [String: MRTExit]()
 		var tracksDict = [String: [String]]()
 
-		for lines in str!.componentsSeparatedByString("\n") {
+		for lines in addressData!.componentsSeparatedByString("\n") {
+			let components = lines.componentsSeparatedByString(",")
+			if components.count != 4 { continue }
+			let stationName = components[0] as String
+			let address = components[1] as String
+			let logitude = components[2] as String
+			let latitude = components[3] as String
+
+			if mapDict[stationName] === nil {
+				let exit = MRTExit(name: stationName)
+				exit.address = address
+				exit.logitude = (logitude as NSString).floatValue
+				exit.latitude = (latitude as NSString).floatValue
+				mapDict[stationName] = exit
+			}
+		}
+
+		for lines in lineData!.componentsSeparatedByString("\n") {
 			let components = lines.componentsSeparatedByString(",")
 			if components.count != 3 { continue }
 			let routeID = components[0] as String
 			let fromID = components[1] as String
 			let toID = components[2] as String
-			if mapDict[fromID] === nil {
-				mapDict[fromID] = MRTExit(name: fromID)
-			}
-			if mapDict[toID] === nil {
-				mapDict[toID] = MRTExit(name: toID)
-			}
+
 			mapDict[fromID]!.addLink(routeID, to: mapDict[toID]!)
 			mapDict[toID]!.addLink(routeID, to: mapDict[fromID]!)
 

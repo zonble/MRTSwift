@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		D41A5C421A190759005D110B /* RouteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41A5C411A190759005D110B /* RouteTableViewController.swift */; };
+		D45260801A1D05560088B882 /* address.txt in Resources */ = {isa = PBXBuildFile; fileRef = D452607F1A1D05560088B882 /* address.txt */; };
+		D45260811A1D06090088B882 /* address.txt in Resources */ = {isa = PBXBuildFile; fileRef = D452607F1A1D05560088B882 /* address.txt */; };
 		D459A9F21A190D410097F0B5 /* MRTHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D459A9F11A190D410097F0B5 /* MRTHelper.swift */; };
 		D4BF10A11A18EB10008CF67E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BF10A01A18EB10008CF67E /* AppDelegate.swift */; };
 		D4BF10A81A18EB10008CF67E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4BF10A71A18EB10008CF67E /* Images.xcassets */; };
@@ -46,6 +48,7 @@
 
 /* Begin PBXFileReference section */
 		D41A5C411A190759005D110B /* RouteTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteTableViewController.swift; sourceTree = "<group>"; };
+		D452607F1A1D05560088B882 /* address.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = address.txt; sourceTree = "<group>"; };
 		D459A9F11A190D410097F0B5 /* MRTHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRTHelper.swift; sourceTree = "<group>"; };
 		D4BF109B1A18EB10008CF67E /* MRTTransitSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MRTTransitSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4BF109F1A18EB10008CF67E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -159,6 +162,7 @@
 				D459A9F11A190D410097F0B5 /* MRTHelper.swift */,
 				D4BF10CD1A18ED2B008CF67E /* MRTMap.swift */,
 				D4D70BC41A1A40F10024B070 /* MRTPriceDatabase.swift */,
+				D452607F1A1D05560088B882 /* address.txt */,
 				D4BF10CA1A18ECEC008CF67E /* data.txt */,
 				D4D70BBF1A1A40930024B070 /* data.sqlite */,
 			);
@@ -246,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4BF10CB1A18ECEC008CF67E /* data.txt in Resources */,
+				D45260801A1D05560088B882 /* address.txt in Resources */,
 				D4D70BC01A1A40930024B070 /* data.sqlite in Resources */,
 				D4BF10AB1A18EB10008CF67E /* LaunchScreen.xib in Resources */,
 				D4BF10A81A18EB10008CF67E /* Images.xcassets in Resources */,
@@ -258,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4BF10CC1A18ECEC008CF67E /* data.txt in Resources */,
+				D45260811A1D06090088B882 /* address.txt in Resources */,
 				D4D70BC11A1A40930024B070 /* data.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

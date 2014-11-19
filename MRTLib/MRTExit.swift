@@ -3,6 +3,9 @@ import Foundation
 class MRTExit : Equatable {
 	var name :String
 	var links = [MRTLink]()
+	var address :String?
+	var logitude :Float?
+	var latitude :Float?
 
 	init(name :String) {
 		self.name = name
