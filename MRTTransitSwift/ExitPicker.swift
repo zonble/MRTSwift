@@ -26,7 +26,7 @@ class ExitPicker :UITableViewController {
 
 	override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		let lineID = lineIDWithSection(section)!
-		let exitNames = MRTMap.sharedMap.tracks[lineID]!
+		let exitNames = MRTMap.sharedMap.lines[lineID]!
 		return exitNames.count
 	}
 
@@ -35,7 +35,7 @@ class ExitPicker :UITableViewController {
 		cell.textLabel.textColor = UIColor.blackColor()
 		cell.textLabel.textAlignment = .Left
 		let lineID = lineIDWithSection(indexPath.section)!
-		let exitNames = MRTMap.sharedMap.tracks[lineID]!
+		let exitNames = MRTMap.sharedMap.lines[lineID]!
 		cell.textLabel.text = exitNames[indexPath.row]
 		cell.accessoryType = self.selectedIndexPath? == indexPath ? .Checkmark : .None
 		return cell
@@ -46,7 +46,7 @@ class ExitPicker :UITableViewController {
 		self.selectedIndexPath = indexPath
 		self.tableView.reloadData()
 		let lineID = lineIDWithSection(indexPath.section)!
-		let exitNames = MRTMap.sharedMap.tracks[lineID]!
+		let exitNames = MRTMap.sharedMap.lines[lineID]!
 		self.delegate?.exitPicker(self, didSelectStationName: exitNames[indexPath.row])
 	}
 

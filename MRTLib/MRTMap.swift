@@ -10,8 +10,8 @@ class MRTMap {
 		}
 	}
 
-	private var exits :[String: MRTExit]!
-	var tracks: [String: [String]]!
+	var exits :[String: MRTExit]!
+	var lines: [String: [String]]!
 
 	init() {
 		self.loadData()
@@ -30,7 +30,7 @@ class MRTMap {
 		if lineData == nil { return }
 
 		var mapDict = [String: MRTExit]()
-		var tracksDict = [String: [String]]()
+		var linesDict = [String: [String]]()
 
 		for lines in addressData!.componentsSeparatedByString("\n") {
 			let components = lines.componentsSeparatedByString(",")
@@ -59,17 +59,17 @@ class MRTMap {
 			mapDict[fromID]!.addLink(routeID, to: mapDict[toID]!)
 			mapDict[toID]!.addLink(routeID, to: mapDict[fromID]!)
 
-			var track = tracksDict[routeID]
-			if track == nil {
-				track = [String]()
-				tracksDict[routeID] = track
+			var line = linesDict[routeID]
+			if line == nil {
+				line = [String]()
+				linesDict[routeID] = line
 			}
-			if !contains(track!, fromID) { track!.append(fromID) }
-			if !contains(track!, toID) { track!.append(toID) }
-			 tracksDict[routeID] = track
+			if !contains(line!, fromID) { line!.append(fromID) }
+			if !contains(line!, toID) { line!.append(toID) }
+			 linesDict[routeID] = line
 		}
 		self.exits = mapDict
-		self.tracks = tracksDict
+		self.lines = linesDict
 	}
 
 	func findRoutes(fromID :String, toID :String) -> [MRTRoute]? {

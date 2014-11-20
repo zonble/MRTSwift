@@ -13,11 +13,11 @@ class MRTTransitSwiftTests: XCTestCase {
 
 	func testPriceDatabase() {
 		self.measureBlock { () -> Void in
-			let tracks = MRTMap.sharedMap.tracks
+			let lines = MRTMap.sharedMap.lines
 			var names = [String]()
-			for trackID in tracks.keys {
-				let trackStationNames = tracks[trackID]
-				names += trackStationNames!
+			for lineID in lines.keys {
+				let linestationNames = lines[lineID]
+				names += linestationNames!
 			}
 			for name1 in names {
 				for name2 in names {

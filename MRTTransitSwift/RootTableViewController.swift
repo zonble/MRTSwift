@@ -37,8 +37,6 @@ class RootTableViewController :UITableViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		self.title = "台北捷運轉乘"
-		var backItem = UIBarButtonItem(title: "", style: .Bordered, target: nil, action: nil)
-		self.navigationItem.backBarButtonItem = backItem
 		self.formatter.numberStyle = .CurrencyStyle
 		self.formatter.locale = NSLocale(localeIdentifier: "zh_Hant_TW")
 		NSNotificationCenter.defaultCenter().addObserver(self, selector:"announcementDidFinish:" , name: UIAccessibilityAnnouncementDidFinishNotification, object: nil)
@@ -50,6 +48,7 @@ class RootTableViewController :UITableViewController {
 		}
 		return 2
 	}
+
 	override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		if section == 2 {
 			return suggestedRoutes.count
