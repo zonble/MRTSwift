@@ -1,3 +1,2 @@
 language: swift
-xcode_project: MRTTransitSwift.xcodeproj
-xcode_scheme: MRTTransitSwift
+script: xcodebuild -sdk iphonesimulator -arch i386 clean build
