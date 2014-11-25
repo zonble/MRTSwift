@@ -1,11 +1,11 @@
 import UIKit
 
-protocol ExitPickerDelegate {
+protocol MRTExitPickerDelegate {
 	func exitPicker(picker: ExitPicker, didSelectStationName name :String)
 }
 
 class ExitPicker :UITableViewController {
-	var delegate :ExitPickerDelegate?
+	var delegate :MRTExitPickerDelegate?
 	var selectedIndexPath :NSIndexPath?
 
 	override func viewDidLoad() {

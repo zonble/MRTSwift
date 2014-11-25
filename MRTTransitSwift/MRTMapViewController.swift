@@ -1,7 +1,7 @@
 import UIKit
 import MapKit
 
-class MapViewAnnotation : NSObject, MKAnnotation {
+class MRTMapViewAnnotation : NSObject, MKAnnotation {
 	var coordinate: CLLocationCoordinate2D
 	var title :String!
 	var subtitle :String!
@@ -13,7 +13,7 @@ class MapViewAnnotation : NSObject, MKAnnotation {
 	}
 }
 
-class MapViewController :UIViewController, MKMapViewDelegate {
+class MRTMapViewController :UIViewController, MKMapViewDelegate {
 	var mapView: MKMapView?
 	var routeLines = [MKPolyline: String]()
 
@@ -27,7 +27,6 @@ class MapViewController :UIViewController, MKMapViewDelegate {
 			"4B": UIColor(hue: 0.12, saturation: 0.75, brightness: 0.91, alpha: 0.7),
 			"5": UIColor(hue: 0.58, saturation: 0.95, brightness: 0.66, alpha: 0.7)]
 		return colors[lineID]
-
 	}
 
 	override func viewDidLoad() {
@@ -47,7 +46,7 @@ class MapViewController :UIViewController, MKMapViewDelegate {
 					}
 					var station = MRTMap.sharedMap.exits[stationName]
 					var coordinate = CLLocationCoordinate2DMake(CLLocationDegrees(station!.logitude!), CLLocationDegrees(station!.latitude!))
-					var annotation = MapViewAnnotation(coordinate: coordinate, title: station!.name, subtitle: station!.address!)
+					var annotation = MRTMapViewAnnotation(coordinate: coordinate, title: station!.name, subtitle: station!.address!)
 					self.mapView!.addAnnotation(annotation)
 					coordinateArray.append(coordinate)
 				}
@@ -67,7 +66,8 @@ class MapViewController :UIViewController, MKMapViewDelegate {
 			view = MKAnnotationView(annotation: annotation, reuseIdentifier: "cell")
 			view.canShowCallout = true
 			let imageView = UIImageView(image: UIImage(named: "metro_station"))
-			imageView.frame = CGRectMake(0, 0, 10, 10)
+			imageView.frame = CGRectMake(-10, 0, 15, 15)
+			imageView.alpha = 0.5;
 			view.addSubview(imageView)
 		}
 		return view
@@ -78,9 +78,9 @@ class MapViewController :UIViewController, MKMapViewDelegate {
 			let route = overlay as MKPolyline
 			let routeRenderer = MKPolylineRenderer(polyline: route)
 			let lineID = self.routeLines[route]!
-			var color = MapViewController.colorForID(lineID)
+			var color = MRTMapViewController.colorForID(lineID)
 			routeRenderer.strokeColor = color ?? UIColor(white: 0.0, alpha: 0.5)
-			routeRenderer.lineWidth = color != nil ? 2 : 7
+			routeRenderer.lineWidth = color != nil ? 4 : 7
 			return routeRenderer
 		}
 		return nil
@@ -88,7 +88,7 @@ class MapViewController :UIViewController, MKMapViewDelegate {
 }
 
 
-class RouteMapViewController :MapViewController {
+class MRTRouteMapViewController :MRTMapViewController {
 	var route :MRTRoute? {
 	didSet {
 		self.loadRoute()
@@ -96,7 +96,7 @@ class RouteMapViewController :MapViewController {
 	}
 
 	func loadRoute() {
-		var v = self.view
+		var aView = self.view
 
 		if let route = self.route {
 			var coordinateArray = [CLLocationCoordinate2D]()

@@ -1,19 +1,15 @@
 import UIKit
 
-class RouteTableViewController :UITableViewController {
-	var route: MRTRoute?
+class MRTRouteTableViewController :UITableViewController {
+	var route: MRTRoute? {
+		didSet {
+			self.tableView.reloadData()
+		}
+	}
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		self.title = "台北捷運轉乘"
-		let item = UIBarButtonItem(title: "Map", style: UIBarButtonItemStyle.Plain, target: self, action: "pushMap")
-		self.navigationItem.rightBarButtonItem = item
-	}
-
-	func pushMap() {
-		var c = RouteMapViewController()
-		c.route = self.route
-		self.navigationController!.pushViewController(c, animated: true)
 	}
 
 	override func numberOfSectionsInTableView(tableView: UITableView) -> Int {

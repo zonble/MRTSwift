@@ -1,6 +1,6 @@
 import UIKit
 
-class RootTableViewController :UITableViewController {
+class MRTRootTableViewController :UITableViewController {
 	var from :String?
 	var to: String?
 	var fromPicker = ExitPicker(style: .Plain)
@@ -39,6 +39,7 @@ class RootTableViewController :UITableViewController {
 		self.title = "台北捷運轉乘"
 		self.formatter.numberStyle = .CurrencyStyle
 		self.formatter.locale = NSLocale(localeIdentifier: "zh_Hant_TW")
+		self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
 		NSNotificationCenter.defaultCenter().addObserver(self, selector:"announcementDidFinish:" , name: UIAccessibilityAnnouncementDidFinishNotification, object: nil)
 	}
 
@@ -126,7 +127,7 @@ class RootTableViewController :UITableViewController {
 		case 1:
 			presentViewController(toPicker)
 		case 2:
-			let vc = RouteTableViewController(style: .Grouped)
+			let vc = MRTRouteViewController()
 			let (title, route) = self.suggestedRoutes[indexPath.row]
 			vc.title = title
 			vc.route = route
@@ -146,7 +147,7 @@ class RootTableViewController :UITableViewController {
 
 }
 
-extension RootTableViewController: ExitPickerDelegate {
+extension MRTRootTableViewController: MRTExitPickerDelegate {
 
 	func announcementDidFinish(notification: NSNotification) {
 		let cell = self.tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 2))
