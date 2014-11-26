@@ -1,9 +1,11 @@
 捷運轉乘
 ========
 
-[Apple App Store 下載](https://itunes.apple.com/tw/app/jie-yun-zhuan-cheng/id943066051?mt=8)
-
 2014 Weizhong Yang a.k.a zonble
+
+[![Build Status](https://travis-ci.org/zonble/MRTSwift.svg?branch=master)](https://travis-ci.org/zonble/MRTSwift)
+
+[Apple App Store 下載](https://itunes.apple.com/tw/app/jie-yun-zhuan-cheng/id943066051?mt=8)
 
 ## 關於「捷運轉乘」
 
