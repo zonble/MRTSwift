@@ -1,2 +1,2 @@
-language: swift
+language: objective-c
 script: xcodebuild -sdk iphonesimulator -arch i386 clean build
