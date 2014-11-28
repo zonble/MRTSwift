@@ -5,6 +5,7 @@ class MRTRouteViewController :UIViewController, UIActionSheetDelegate {
 	lazy var tableViewController = MRTRouteTableViewController(style: .Grouped)
 	lazy var mapViewController = MRTRouteMapViewController()
 	lazy var segmentedControl = UISegmentedControl(items: ["路線", "地圖"])
+
 	var route: MRTRoute? {
 		didSet {
 			tableViewController.route = self.route
@@ -16,20 +17,22 @@ class MRTRouteViewController :UIViewController, UIActionSheetDelegate {
 		self.view = UIScrollView()
 		self.view.backgroundColor = UIColor.lightGrayColor()
 		self.automaticallyAdjustsScrollViewInsets = true
+		self.edgesForExtendedLayout = .Left | .Right | .Bottom
+		self.segmentedControl.frame = CGRectMake(0, 0, 200, 32)
 	}
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-
 		segmentedControl.addTarget(self, action: "changeTab:", forControlEvents: UIControlEvents.ValueChanged)
 		segmentedControl.selectedSegmentIndex = 0
 		tableViewController.view.frame = self.view.bounds
 		tableViewController.view.autoresizingMask = .FlexibleWidth | .FlexibleHeight
 		self.view.addSubview(tableViewController.view)
+		self.title = nil
 	}
 
-	override func viewWillAppear(animated: Bool) {
-		super.viewWillAppear(animated)
+	override func viewDidAppear(animated: Bool) {
+		super.viewDidAppear(animated)
 		self.navigationItem.titleView = segmentedControl
 	}
 
