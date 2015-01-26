@@ -66,29 +66,29 @@ class MRTRootTableViewController :UITableViewController {
 			cell = UITableViewCell(style: .Value1, reuseIdentifier: "Cell")
 		}
 		if let cell = cell {
-			cell.textLabel.textColor = UIColor.blackColor()
-			cell.textLabel.textAlignment = .Left
+			cell.textLabel?.textColor = UIColor.blackColor()
+			cell.textLabel?.textAlignment = .Left
 			cell.selectionStyle = .Blue
 			cell.detailTextLabel!.text = ""
 			cell.accessibilityHint = nil
 			section: switch indexPath.section {
 			case 0:
-				cell.textLabel.text = self.from ?? "尚未設定"
+				cell.textLabel?.text = self.from ?? "尚未設定"
 				cell.accessoryType = .DisclosureIndicator
 				cell.accessibilityHint = "點擊設定路線起點"
 			case 1:
-				cell.textLabel.text = self.to ?? "尚未設定"
+				cell.textLabel?.text = self.to ?? "尚未設定"
 				cell.accessoryType = .DisclosureIndicator
 				cell.accessibilityHint = "點擊設定路線終點"
 			case 2:
 				var (title, route) = self.suggestedRoutes[indexPath.row]
-				cell.textLabel.text = title
+				cell.textLabel?.text = title
 				cell.accessoryType = .DisclosureIndicator
 				cell.detailTextLabel!.text = "共\(route.links.count)站，轉\(route.transitions.count - 1)次"
 			case 3:
 				cell.selectionStyle = .None
 				cell.accessoryType = .None
-				cell.textLabel.text = ["單程票", "悠遊卡", "敬老、愛心卡", "官方說的時間"][indexPath.row]
+				cell.textLabel?.text = ["單程票", "悠遊卡", "敬老、愛心卡", "官方說的時間"][indexPath.row]
 				row: switch indexPath.row {
 				case 0:
 					cell.detailTextLabel!.text = onewayFare != nil ? formatter.stringFromNumber(Int(onewayFare!)) : ""

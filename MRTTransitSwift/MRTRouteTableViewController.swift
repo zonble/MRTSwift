@@ -17,10 +17,7 @@ class MRTRouteTableViewController :UITableViewController {
 	}
 
 	override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		if let route = self.route {
-			return route.transitions[section].count
-		}
-		return 0
+		return self.route?.transitions[section].count ?? 0
 	}
 
 	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -29,13 +26,13 @@ class MRTRouteTableViewController :UITableViewController {
 			cell = UITableViewCell(style: .Value1, reuseIdentifier: "Cell")
 		}
 		if let cell = cell {
-			cell.textLabel.textColor = UIColor.blackColor()
-			cell.textLabel.textAlignment = .Left
+			cell.textLabel?.textColor = UIColor.blackColor()
+			cell.textLabel?.textAlignment = .Left
 			cell.selectionStyle = .None
 			if let route = self.route {
 				let routeSection = route.transitions[indexPath.section]
 				let (lineID, from, to) = routeSection[indexPath.row]
-				cell.textLabel.text = "\(from.name) - \(to.name)"
+				cell.textLabel?.text = "\(from.name) - \(to.name)"
 				cell.detailTextLabel!.text = MRTLineName(lineID)
 			}
 		}
