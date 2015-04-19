@@ -75,7 +75,7 @@ class MRTMapViewController :UIViewController, MKMapViewDelegate {
 
 	func mapView(mapView: MKMapView!, rendererForOverlay overlay: MKOverlay!) -> MKOverlayRenderer! {
 		if overlay.isKindOfClass(MKPolyline.self) {
-			let route = overlay as MKPolyline
+			let route = overlay as! MKPolyline
 			let routeRenderer = MKPolylineRenderer(polyline: route)
 			let lineID = self.routeLines[route]!
 			var color = MRTMapViewController.colorForID(lineID)

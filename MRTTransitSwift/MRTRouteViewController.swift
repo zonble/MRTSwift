@@ -37,7 +37,7 @@ class MRTRouteViewController :UIViewController, UIActionSheetDelegate {
 	}
 
 	func changeTab(sender :AnyObject?) {
-		var segmentedControl = sender as UISegmentedControl
+		var segmentedControl = sender as! UISegmentedControl
 		switch segmentedControl.selectedSegmentIndex {
 		case 0:
 			mapViewController.view.removeFromSuperview()

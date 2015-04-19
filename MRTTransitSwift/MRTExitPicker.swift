@@ -12,7 +12,7 @@ class ExitPicker :UITableViewController {
 		super.viewDidLoad()
 		self.title = "請選擇捷運站"
 		self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "Cell")
-		var backItem = UIBarButtonItem(title: "", style: .Bordered, target: nil, action: nil)
+		var backItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
 		self.navigationItem.backBarButtonItem = backItem
 	}
 
@@ -31,13 +31,13 @@ class ExitPicker :UITableViewController {
 	}
 
 	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-		var cell = tableView.dequeueReusableCellWithIdentifier("Cell") as UITableViewCell
+		var cell = tableView.dequeueReusableCellWithIdentifier("Cell") as! UITableViewCell
 		cell.textLabel?.textColor = UIColor.blackColor()
 		cell.textLabel?.textAlignment = .Left
 		let lineID = lineIDWithSection(indexPath.section)!
 		let exitNames = MRTMap.sharedMap.lines[lineID]!
 		cell.textLabel?.text = exitNames[indexPath.row]
-		cell.accessoryType = self.selectedIndexPath? == indexPath ? .Checkmark : .None
+		cell.accessoryType = self.selectedIndexPath == indexPath ? .Checkmark : .None
 		return cell
 	}
 

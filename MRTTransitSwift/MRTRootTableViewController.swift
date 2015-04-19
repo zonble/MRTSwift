@@ -131,7 +131,7 @@ class MRTRootTableViewController :UITableViewController {
 			let (title, route) = self.suggestedRoutes[indexPath.row]
 			vc.title = title
 			vc.route = route
-			var appDelegate :AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+			var appDelegate :AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
 			appDelegate.splitViewController!.showDetailViewController(UINavigationController(rootViewController: vc), sender: self)
 		default:
 			break

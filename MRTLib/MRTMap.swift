@@ -35,10 +35,10 @@ class MRTMap {
 		for lines in addressData!.componentsSeparatedByString("\n") {
 			let components = lines.componentsSeparatedByString(",")
 			if components.count != 4 { continue }
-			let stationName = components[0] as String
-			let address = components[1] as String
-			let logitude = components[2] as String
-			let latitude = components[3] as String
+			let stationName = components[0] as! String
+			let address = components[1] as! String
+			let logitude = components[2] as! String
+			let latitude = components[3] as! String
 
 			if mapDict[stationName] === nil {
 				let exit = MRTExit(name: stationName)
@@ -52,9 +52,9 @@ class MRTMap {
 		for lines in lineData!.componentsSeparatedByString("\n") {
 			let components = lines.componentsSeparatedByString(",")
 			if components.count != 3 { continue }
-			let routeID = components[0] as String
-			let fromID = components[1] as String
-			let toID = components[2] as String
+			let routeID = components[0] as! String
+			let fromID = components[1] as! String
+			let toID = components[2] as! String
 
 			mapDict[fromID]!.addLink(routeID, to: mapDict[toID]!)
 			mapDict[toID]!.addLink(routeID, to: mapDict[fromID]!)
