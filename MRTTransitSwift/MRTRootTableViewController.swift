@@ -114,7 +114,7 @@ class MRTRootTableViewController :UITableViewController {
 		func presentViewController(vc :UIViewController) {
 			var nav = UINavigationController(rootViewController: vc)
 			nav.preferredContentSize = CGSizeMake(320, 600)
-			nav.modalPresentationStyle = UIModalPresentationStyle.Popover
+			nav.modalPresentationStyle = .Popover
 			var cell = tableView.cellForRowAtIndexPath(indexPath)
 			nav.popoverPresentationController!.sourceView = cell!
 			nav.popoverPresentationController!.sourceRect = cell!.bounds
