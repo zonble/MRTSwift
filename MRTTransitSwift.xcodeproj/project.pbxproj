@@ -225,9 +225,11 @@
 					D4BF109A1A18EB10008CF67E = {
 						CreatedOnToolsVersion = 6.1;
 						DevelopmentTeam = X29ZB2LBKB;
+						LastSwiftMigration = 0920;
 					};
 					D4BF10AF1A18EB10008CF67E = {
 						CreatedOnToolsVersion = 6.1;
+						LastSwiftMigration = 0920;
 						TestTargetID = D4BF109A1A18EB10008CF67E;
 					};
 				};
@@ -422,6 +424,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -436,6 +440,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -455,6 +461,8 @@
 				INFOPLIST_FILE = MRTTransitSwiftTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MRTTransitSwift.app/MRTTransitSwift";
 			};
 			name = Debug;
@@ -470,6 +478,8 @@
 				INFOPLIST_FILE = MRTTransitSwiftTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MRTTransitSwift.app/MRTTransitSwift";
 			};
 			name = Release;

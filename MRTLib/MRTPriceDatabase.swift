@@ -1,25 +1,26 @@
 import Foundation
 
 class MRTPriceDatabase {
-	class var sharedDatabase :MRTPriceDatabase {
+	class var sharedDatabase: MRTPriceDatabase {
 		get {
 			struct _internal {
 				static let _sharedDatabase = MRTPriceDatabase()
 			}
+
 			return _internal._sharedDatabase
 		}
 	}
 
-	var db:COpaquePointer = nil
+	var db: OpaquePointer? = nil
 
 	init() {
-		let bundle = NSBundle(forClass: MRTPriceDatabase.self)
-		let path = bundle.pathForResource("data", ofType: "sqlite")
-		let cpath = path!.cStringUsingEncoding(NSUTF8StringEncoding)
+		let bundle = Bundle(for: MRTPriceDatabase.self)
+		let path = bundle.path(forResource: "data", ofType: "sqlite")
+		let cpath = path!.cString(using: String.Encoding.utf8)
 		let error = sqlite3_open(cpath!, &db)
 		if error != SQLITE_OK {
 			// Open failed, close DB and fail
-			println("SQLiteDB - failed to open DB!")
+			print("SQLiteDB - failed to open DB!")
 			sqlite3_close(db)
 		}
 	}
@@ -32,8 +33,8 @@ class MRTPriceDatabase {
 
 	func price(fromStationName: String, toStationName: String) -> [(Int32, Int32, Int32, Int32)] {
 		let sql = "select * from data where from_station=\"\(fromStationName)\" and to_station=\"\(toStationName)\";"
-		var stmt:COpaquePointer = nil
-		var cSql = sql.cStringUsingEncoding(NSUTF8StringEncoding)
+		var stmt: OpaquePointer? = nil
+		let cSql = sql.cString(using: String.Encoding.utf8)
 		let result = sqlite3_prepare_v2(self.db, cSql!, -1, &stmt, nil)
 		var rows = [(Int32, Int32, Int32, Int32)]()
 		if result == SQLITE_OK {

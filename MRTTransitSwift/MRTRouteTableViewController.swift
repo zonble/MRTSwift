@@ -1,6 +1,6 @@
 import UIKit
 
-class MRTRouteTableViewController :UITableViewController {
+class MRTRouteTableViewController: UITableViewController {
 	var route: MRTRoute? {
 		didSet {
 			self.tableView.reloadData()
@@ -12,34 +12,34 @@ class MRTRouteTableViewController :UITableViewController {
 		self.title = "台北捷運轉乘"
 	}
 
-	override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+	override func numberOfSections(in tableView: UITableView) -> Int {
 		return self.route?.transitions.count ?? 1
 	}
 
-	override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return self.route?.transitions[section].count ?? 0
 	}
 
-	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-		var cell :UITableViewCell? = tableView.dequeueReusableCellWithIdentifier("Cell") as? UITableViewCell
+	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		var cell: UITableViewCell? = tableView.dequeueReusableCell(withIdentifier: "Cell")
 		if cell == nil {
-			cell = UITableViewCell(style: .Value1, reuseIdentifier: "Cell")
+			cell = UITableViewCell(style: .value1, reuseIdentifier: "Cell")
 		}
 		if let cell = cell {
-			cell.textLabel?.textColor = UIColor.blackColor()
-			cell.textLabel?.textAlignment = .Left
-			cell.selectionStyle = .None
+			cell.textLabel?.textColor = UIColor.black
+			cell.textLabel?.textAlignment = .left
+			cell.selectionStyle = .none
 			if let route = self.route {
 				let routeSection = route.transitions[indexPath.section]
 				let (lineID, from, to) = routeSection[indexPath.row]
 				cell.textLabel?.text = "\(from.name) - \(to.name)"
-				cell.detailTextLabel!.text = MRTLineName(lineID)
+				cell.detailTextLabel!.text = MRTLineName(lineID: lineID)
 			}
 		}
 		return cell!
 	}
 
-	override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+	override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
 		if section == 0 {
 			if let route = self.route {
 				return "共 \(route.links.count) 站，轉乘 \(route.transitions.count - 1)  次"

@@ -9,6 +9,6 @@ var MRTLineNameDictionary = [
 	"4B": "蘆洲線",
 	"5": "板南線"]
 
-func MRTLineName(lineID :String) -> String? {
+func MRTLineName(lineID: String) -> String? {
 	return MRTLineNameDictionary[lineID]
 }

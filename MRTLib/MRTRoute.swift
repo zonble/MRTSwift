@@ -1,11 +1,11 @@
 import Foundation
 
 class MRTRoute {
-	var from :MRTExit
-	var links :[MRTLink]
+	var from: MRTExit
+	var links: [MRTLink]
 	var transitions = [[(String, MRTExit, MRTExit)]]()
 
-	init(from :MRTExit, links:[MRTLink]) {
+	init(from: MRTExit, links: [MRTLink]) {
 		self.from = from
 		self.links = links
 
