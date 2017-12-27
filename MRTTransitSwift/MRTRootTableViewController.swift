@@ -90,7 +90,7 @@ class MRTRootTableViewController: UITableViewController {
 			case 3:
 				cell.selectionStyle = .none
 				cell.accessoryType = .none
-				cell.textLabel?.text = ["單程票", "悠遊卡", "敬老、愛心卡", "官方說的時間"][indexPath.row]
+				cell.textLabel?.text = ["🚉 單程票", " 🚉 悠遊卡", "👴🏻 敬老、愛心卡", "⏰ 官方說的時間"][indexPath.row]
 				row: switch indexPath.row {
 				case 0:
 					cell.detailTextLabel!.text = onewayFare != nil ? formatter.string(from: NSNumber(value: Int(onewayFare!))) : ""

@@ -45,7 +45,7 @@ class MRTMapViewController: UIViewController, MKMapViewDelegate {
 						continue
 					}
 					let station = MRTMap.sharedMap.exits[stationName]
-					let coordinate = CLLocationCoordinate2DMake(CLLocationDegrees(station!.logitude!), CLLocationDegrees(station!.latitude!))
+					let coordinate = CLLocationCoordinate2DMake(CLLocationDegrees(station!.latitude!), CLLocationDegrees(station!.logitude!))
 					let annotation = MRTMapViewAnnotation(coordinate: coordinate, title: station!.name, subtitle: station!.address!)
 					self.mapView!.addAnnotation(annotation)
 					coordinateArray.append(coordinate)
@@ -103,11 +103,11 @@ class MRTRouteMapViewController: MRTMapViewController {
 		if let route = self.route {
 			var coordinateArray = [CLLocationCoordinate2D]()
 			let from = route.from
-			let fromCoordinate = CLLocationCoordinate2DMake(CLLocationDegrees(from.logitude!), CLLocationDegrees(from.latitude!))
+			let fromCoordinate = CLLocationCoordinate2DMake(CLLocationDegrees(from.latitude!), CLLocationDegrees(from.logitude!))
 			coordinateArray.append(fromCoordinate)
 			for link in route.links {
 				let station = link.to
-				let coordinate = CLLocationCoordinate2DMake(CLLocationDegrees(station.logitude!), CLLocationDegrees(station.latitude!))
+				let coordinate = CLLocationCoordinate2DMake(CLLocationDegrees(station.latitude!), CLLocationDegrees(station.logitude!))
 				coordinateArray.append(coordinate)
 			}
 			let routeLine = MKPolyline(coordinates: &coordinateArray, count: coordinateArray.count)
