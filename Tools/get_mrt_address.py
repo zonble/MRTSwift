@@ -6,7 +6,6 @@ import urllib2
 import re
 
 def get_options():
-	# url = 'http://web.trtc.com.tw/c/TicketALLresult.asp'
 	url = 'http://www.metro.taipei/ct.asp?xItem=78479152&CtNode=70089&mp=122035'
 	req = urllib2.Request(url)
 	response = urllib2.urlopen(req)

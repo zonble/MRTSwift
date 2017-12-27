@@ -24,7 +24,14 @@ class MRTMap {
 		if addressFilePath == nil {
 			return
 		}
-		let addressData = try! String(contentsOfFile: addressFilePath!, encoding: .utf8)
+		var addressData: String!
+		do {
+			addressData = try String(contentsOfFile: addressFilePath!, encoding: .utf8)
+		} catch {
+			print("\(error)")
+			return
+		}
+
 		let lineDataFilepath = Bundle(for: MRTMap.self).path(forResource: "data", ofType: "txt")
 		if lineDataFilepath == nil {
 			return

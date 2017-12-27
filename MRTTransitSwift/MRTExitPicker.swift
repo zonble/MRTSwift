@@ -32,14 +32,14 @@ class ExitPicker: UITableViewController {
 	}
 
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! UITableViewCell
-		cell.textLabel?.textColor = UIColor.black
-		cell.textLabel?.textAlignment = .left
+		let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
+		cell?.textLabel?.textColor = UIColor.black
+		cell?.textLabel?.textAlignment = .left
 		let lineID = lineIDWithSection(section: indexPath.section)!
 		let exitNames = MRTMap.sharedMap.lines[lineID]!
-		cell.textLabel?.text = exitNames[indexPath.row]
-		cell.accessoryType = self.selectedIndexPath == indexPath ? .checkmark : .none
-		return cell
+		cell?.textLabel?.text = exitNames[indexPath.row]
+		cell?.accessoryType = self.selectedIndexPath == indexPath ? .checkmark : .none
+		return cell!
 	}
 
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
