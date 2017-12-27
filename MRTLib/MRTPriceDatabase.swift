@@ -1,16 +1,7 @@
 import Foundation
 
-class MRTPriceDatabase {
-	class var sharedDatabase: MRTPriceDatabase {
-		get {
-			struct _internal {
-				static let _sharedDatabase = MRTPriceDatabase()
-			}
-
-			return _internal._sharedDatabase
-		}
-	}
-
+public class MRTPriceDatabase {
+	public static let sharedDatabase = MRTPriceDatabase()
 	var db: OpaquePointer? = nil
 
 	init() {
@@ -31,7 +22,7 @@ class MRTPriceDatabase {
 		}
 	}
 
-	func price(fromStationName: String, toStationName: String) -> [(Int32, Int32, Int32, Int32)] {
+	public func price(fromStationName: String, toStationName: String) -> [(Int32, Int32, Int32, Int32)] {
 		let sql = "select * from data where from_station=\"\(fromStationName)\" and to_station=\"\(toStationName)\";"
 		var stmt: OpaquePointer? = nil
 		let cSql = sql.cString(using: String.Encoding.utf8)

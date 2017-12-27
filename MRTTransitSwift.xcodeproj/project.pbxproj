@@ -9,33 +9,16 @@
 /* Begin PBXBuildFile section */
 		D4049E631A24CD3B00AA52E9 /* MRTRouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4049E621A24CD3B00AA52E9 /* MRTRouteViewController.swift */; };
 		D41A5C421A190759005D110B /* MRTRouteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41A5C411A190759005D110B /* MRTRouteTableViewController.swift */; };
-		D45260801A1D05560088B882 /* address.txt in Resources */ = {isa = PBXBuildFile; fileRef = D452607F1A1D05560088B882 /* address.txt */; };
-		D45260811A1D06090088B882 /* address.txt in Resources */ = {isa = PBXBuildFile; fileRef = D452607F1A1D05560088B882 /* address.txt */; };
 		D45260831A1D07280088B882 /* MRTMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45260821A1D07280088B882 /* MRTMapViewController.swift */; };
-		D459A9F21A190D410097F0B5 /* MRTHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D459A9F11A190D410097F0B5 /* MRTHelper.swift */; };
 		D4BF10A11A18EB10008CF67E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BF10A01A18EB10008CF67E /* AppDelegate.swift */; };
 		D4BF10A81A18EB10008CF67E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4BF10A71A18EB10008CF67E /* Images.xcassets */; };
 		D4BF10AB1A18EB10008CF67E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4BF10A91A18EB10008CF67E /* LaunchScreen.xib */; };
 		D4BF10B71A18EB10008CF67E /* MRTTransitSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BF10B61A18EB10008CF67E /* MRTTransitSwiftTests.swift */; };
-		D4BF10C21A18EB35008CF67E /* MRTExit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BF10C11A18EB35008CF67E /* MRTExit.swift */; };
-		D4BF10C31A18EB35008CF67E /* MRTExit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BF10C11A18EB35008CF67E /* MRTExit.swift */; };
-		D4BF10C51A18EB90008CF67E /* MRTLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BF10C41A18EB90008CF67E /* MRTLink.swift */; };
-		D4BF10C61A18EB90008CF67E /* MRTLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BF10C41A18EB90008CF67E /* MRTLink.swift */; };
-		D4BF10C81A18EC07008CF67E /* MRTRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BF10C71A18EC07008CF67E /* MRTRoute.swift */; };
-		D4BF10C91A18EC07008CF67E /* MRTRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BF10C71A18EC07008CF67E /* MRTRoute.swift */; };
-		D4BF10CB1A18ECEC008CF67E /* data.txt in Resources */ = {isa = PBXBuildFile; fileRef = D4BF10CA1A18ECEC008CF67E /* data.txt */; };
-		D4BF10CC1A18ECEC008CF67E /* data.txt in Resources */ = {isa = PBXBuildFile; fileRef = D4BF10CA1A18ECEC008CF67E /* data.txt */; };
-		D4BF10CE1A18ED2B008CF67E /* MRTMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BF10CD1A18ED2B008CF67E /* MRTMap.swift */; };
-		D4BF10CF1A18ED2B008CF67E /* MRTMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BF10CD1A18ED2B008CF67E /* MRTMap.swift */; };
 		D4C8DC5E1A18F701009D7F66 /* MRTRootTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C8DC5D1A18F701009D7F66 /* MRTRootTableViewController.swift */; };
 		D4C8DC601A18F7F0009D7F66 /* MRTExitPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C8DC5F1A18F7F0009D7F66 /* MRTExitPicker.swift */; };
-		D4D70BC01A1A40930024B070 /* data.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D4D70BBF1A1A40930024B070 /* data.sqlite */; };
-		D4D70BC11A1A40930024B070 /* data.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D4D70BBF1A1A40930024B070 /* data.sqlite */; };
-		D4D70BC51A1A40F10024B070 /* MRTPriceDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D70BC41A1A40F10024B070 /* MRTPriceDatabase.swift */; };
-		D4D70BC61A1A40F10024B070 /* MRTPriceDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D70BC41A1A40F10024B070 /* MRTPriceDatabase.swift */; };
-		D4D70BCA1A1A433A0024B070 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D70BC91A1A433A0024B070 /* libsqlite3.dylib */; };
-		D4D70BCD1A1A43460024B070 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D70BC91A1A433A0024B070 /* libsqlite3.dylib */; };
 		D4D9A2531A1A6C7C005D6C27 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D4D9A2521A1A6C7C005D6C27 /* InfoPlist.strings */; };
+		D4F2C0AA1FF401D700E83271 /* MRTLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4F2C0A71FF4017600E83271 /* MRTLib.framework */; };
+		D4F2C0AB1FF401D700E83271 /* MRTLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D4F2C0A71FF4017600E83271 /* MRTLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,14 +29,47 @@
 			remoteGlobalIDString = D4BF109A1A18EB10008CF67E;
 			remoteInfo = MRTTransitSwift;
 		};
+		D4F2C0A61FF4017600E83271 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4F2C0A21FF4017600E83271 /* MRTLib.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D4F2C0781FF3FDDB00E83271;
+			remoteInfo = MRTLib;
+		};
+		D4F2C0A81FF401C500E83271 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4F2C0A21FF4017600E83271 /* MRTLib.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D4F2C0771FF3FDDB00E83271;
+			remoteInfo = MRTLib;
+		};
+		D4F2C0AC1FF401D700E83271 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4F2C0A21FF4017600E83271 /* MRTLib.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D4F2C0771FF3FDDB00E83271;
+			remoteInfo = MRTLib;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D4F2C0AE1FF401D700E83271 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D4F2C0AB1FF401D700E83271 /* MRTLib.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		D4049E621A24CD3B00AA52E9 /* MRTRouteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRTRouteViewController.swift; sourceTree = "<group>"; };
 		D41A5C411A190759005D110B /* MRTRouteTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRTRouteTableViewController.swift; sourceTree = "<group>"; };
-		D452607F1A1D05560088B882 /* address.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = address.txt; sourceTree = "<group>"; };
 		D45260821A1D07280088B882 /* MRTMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRTMapViewController.swift; sourceTree = "<group>"; };
-		D459A9F11A190D410097F0B5 /* MRTHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRTHelper.swift; sourceTree = "<group>"; };
 		D4BF109B1A18EB10008CF67E /* MRTTransitSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MRTTransitSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4BF109F1A18EB10008CF67E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4BF10A01A18EB10008CF67E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -62,18 +78,10 @@
 		D4BF10B01A18EB10008CF67E /* MRTTransitSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MRTTransitSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4BF10B51A18EB10008CF67E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4BF10B61A18EB10008CF67E /* MRTTransitSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRTTransitSwiftTests.swift; sourceTree = "<group>"; };
-		D4BF10C11A18EB35008CF67E /* MRTExit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRTExit.swift; sourceTree = "<group>"; };
-		D4BF10C41A18EB90008CF67E /* MRTLink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRTLink.swift; sourceTree = "<group>"; };
-		D4BF10C71A18EC07008CF67E /* MRTRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRTRoute.swift; sourceTree = "<group>"; };
-		D4BF10CA1A18ECEC008CF67E /* data.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = data.txt; sourceTree = "<group>"; };
-		D4BF10CD1A18ED2B008CF67E /* MRTMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRTMap.swift; sourceTree = "<group>"; };
 		D4C8DC5D1A18F701009D7F66 /* MRTRootTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRTRootTableViewController.swift; sourceTree = "<group>"; };
 		D4C8DC5F1A18F7F0009D7F66 /* MRTExitPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRTExitPicker.swift; sourceTree = "<group>"; };
-		D4D70BBF1A1A40930024B070 /* data.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = data.sqlite; sourceTree = "<group>"; };
-		D4D70BC41A1A40F10024B070 /* MRTPriceDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRTPriceDatabase.swift; sourceTree = "<group>"; };
-		D4D70BC81A1A425C0024B070 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
-		D4D70BC91A1A433A0024B070 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		D4D9A2521A1A6C7C005D6C27 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
+		D4F2C0A21FF4017600E83271 /* MRTLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = MRTLib.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4D70BCA1A1A433A0024B070 /* libsqlite3.dylib in Frameworks */,
+				D4F2C0AA1FF401D700E83271 /* MRTLib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,7 +97,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4D70BCD1A1A43460024B070 /* libsqlite3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,9 +106,7 @@
 		D4BF10921A18EB10008CF67E = {
 			isa = PBXGroup;
 			children = (
-				D4D70BC91A1A433A0024B070 /* libsqlite3.dylib */,
-				D4D70BC81A1A425C0024B070 /* Bridging-Header.h */,
-				D4BF10C01A18EB21008CF67E /* MRTLib */,
+				D4F2C0A21FF4017600E83271 /* MRTLib.xcodeproj */,
 				D4BF109D1A18EB10008CF67E /* MRTTransitSwift */,
 				D4BF10B31A18EB10008CF67E /* MRTTransitSwiftTests */,
 				D4BF109C1A18EB10008CF67E /* Products */,
@@ -159,20 +164,12 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		D4BF10C01A18EB21008CF67E /* MRTLib */ = {
+		D4F2C0A31FF4017600E83271 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D4BF10C11A18EB35008CF67E /* MRTExit.swift */,
-				D4BF10C41A18EB90008CF67E /* MRTLink.swift */,
-				D4BF10C71A18EC07008CF67E /* MRTRoute.swift */,
-				D459A9F11A190D410097F0B5 /* MRTHelper.swift */,
-				D4BF10CD1A18ED2B008CF67E /* MRTMap.swift */,
-				D4D70BC41A1A40F10024B070 /* MRTPriceDatabase.swift */,
-				D452607F1A1D05560088B882 /* address.txt */,
-				D4BF10CA1A18ECEC008CF67E /* data.txt */,
-				D4D70BBF1A1A40930024B070 /* data.sqlite */,
+				D4F2C0A71FF4017600E83271 /* MRTLib.framework */,
 			);
-			path = MRTLib;
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,10 +182,13 @@
 				D4BF10971A18EB10008CF67E /* Sources */,
 				D4BF10981A18EB10008CF67E /* Frameworks */,
 				D4BF10991A18EB10008CF67E /* Resources */,
+				D4F2C0AE1FF401D700E83271 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D4F2C0A91FF401C500E83271 /* PBXTargetDependency */,
+				D4F2C0AD1FF401D700E83271 /* PBXTargetDependency */,
 			);
 			name = MRTTransitSwift;
 			productName = MRTTransitSwift;
@@ -245,6 +245,12 @@
 			mainGroup = D4BF10921A18EB10008CF67E;
 			productRefGroup = D4BF109C1A18EB10008CF67E /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = D4F2C0A31FF4017600E83271 /* Products */;
+					ProjectRef = D4F2C0A21FF4017600E83271 /* MRTLib.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				D4BF109A1A18EB10008CF67E /* MRTTransitSwift */,
@@ -253,14 +259,21 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		D4F2C0A71FF4017600E83271 /* MRTLib.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = MRTLib.framework;
+			remoteRef = D4F2C0A61FF4017600E83271 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		D4BF10991A18EB10008CF67E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4BF10CB1A18ECEC008CF67E /* data.txt in Resources */,
-				D45260801A1D05560088B882 /* address.txt in Resources */,
-				D4D70BC01A1A40930024B070 /* data.sqlite in Resources */,
 				D4BF10AB1A18EB10008CF67E /* LaunchScreen.xib in Resources */,
 				D4BF10A81A18EB10008CF67E /* Images.xcassets in Resources */,
 				D4D9A2531A1A6C7C005D6C27 /* InfoPlist.strings in Resources */,
@@ -271,9 +284,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4BF10CC1A18ECEC008CF67E /* data.txt in Resources */,
-				D45260811A1D06090088B882 /* address.txt in Resources */,
-				D4D70BC11A1A40930024B070 /* data.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,15 +296,9 @@
 			files = (
 				D4049E631A24CD3B00AA52E9 /* MRTRouteViewController.swift in Sources */,
 				D45260831A1D07280088B882 /* MRTMapViewController.swift in Sources */,
-				D4BF10C21A18EB35008CF67E /* MRTExit.swift in Sources */,
-				D4BF10C51A18EB90008CF67E /* MRTLink.swift in Sources */,
 				D4C8DC5E1A18F701009D7F66 /* MRTRootTableViewController.swift in Sources */,
-				D4D70BC51A1A40F10024B070 /* MRTPriceDatabase.swift in Sources */,
 				D4C8DC601A18F7F0009D7F66 /* MRTExitPicker.swift in Sources */,
-				D459A9F21A190D410097F0B5 /* MRTHelper.swift in Sources */,
 				D4BF10A11A18EB10008CF67E /* AppDelegate.swift in Sources */,
-				D4BF10CE1A18ED2B008CF67E /* MRTMap.swift in Sources */,
-				D4BF10C81A18EC07008CF67E /* MRTRoute.swift in Sources */,
 				D41A5C421A190759005D110B /* MRTRouteTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,11 +308,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4BF10B71A18EB10008CF67E /* MRTTransitSwiftTests.swift in Sources */,
-				D4BF10C31A18EB35008CF67E /* MRTExit.swift in Sources */,
-				D4BF10C61A18EB90008CF67E /* MRTLink.swift in Sources */,
-				D4D70BC61A1A40F10024B070 /* MRTPriceDatabase.swift in Sources */,
-				D4BF10CF1A18ED2B008CF67E /* MRTMap.swift in Sources */,
-				D4BF10C91A18EC07008CF67E /* MRTRoute.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +318,16 @@
 			isa = PBXTargetDependency;
 			target = D4BF109A1A18EB10008CF67E /* MRTTransitSwift */;
 			targetProxy = D4BF10B11A18EB10008CF67E /* PBXContainerItemProxy */;
+		};
+		D4F2C0A91FF401C500E83271 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MRTLib;
+			targetProxy = D4F2C0A81FF401C500E83271 /* PBXContainerItemProxy */;
+		};
+		D4F2C0AD1FF401D700E83271 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MRTLib;
+			targetProxy = D4F2C0AC1FF401D700E83271 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -372,7 +381,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Ounchecked";
 			};
 			name = Debug;
@@ -408,7 +417,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -417,6 +426,7 @@
 		D4BF10BB1A18EB10008CF67E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -433,6 +443,7 @@
 		D4BF10BC1A18EB10008CF67E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";

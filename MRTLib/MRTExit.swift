@@ -1,11 +1,11 @@
 import Foundation
 
-class MRTExit: Equatable {
-	var name: String
-	var links = [MRTLink]()
-	var address: String?
-	var logitude: Float?
-	var latitude: Float?
+public class MRTExit: Equatable {
+	public var name: String
+	public var links = [MRTLink]()
+	public var address: String?
+	public var logitude: Float?
+	public var latitude: Float?
 
 	init(name: String) {
 		self.name = name
@@ -16,6 +16,6 @@ class MRTExit: Equatable {
 	}
 }
 
-func ==(lhs: MRTExit, rhs: MRTExit) -> Bool {
+public func ==(lhs: MRTExit, rhs: MRTExit) -> Bool {
 	return lhs === rhs
 }

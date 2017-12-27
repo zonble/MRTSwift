@@ -1,18 +1,10 @@
 import Foundation
 
-class MRTMap {
-	class var sharedMap: MRTMap {
-		get {
-			struct _internal {
-				static let _sharedMap = MRTMap()
-			}
+public class MRTMap {
+	public static let sharedMap = MRTMap()
 
-			return _internal._sharedMap
-		}
-	}
-
-	var exits: [String: MRTExit]!
-	var lines: [String: [String]]!
+	public private(set) var exits: [String: MRTExit]!
+	public private(set) var lines: [String: [String]]!
 
 	init() {
 		self.loadData()
@@ -89,7 +81,7 @@ class MRTMap {
 		self.lines = linesDict
 	}
 
-	func findRoutes(fromID: String, toID: String) -> [MRTRoute]? {
+	public func findRoutes(fromID: String, toID: String) -> [MRTRoute]? {
 		let fromExit = exits[fromID]
 		if fromExit == nil {
 			return nil

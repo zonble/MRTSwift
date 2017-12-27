@@ -1,4 +1,5 @@
 import UIKit
+import MRTLib
 
 protocol MRTExitPickerDelegate {
 	func exitPicker(picker: ExitPicker, didSelectStationName name: String)

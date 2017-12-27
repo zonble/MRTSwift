@@ -1,5 +1,6 @@
 import UIKit
 import MapKit
+import MRTLib
 
 class MRTMapViewAnnotation: NSObject, MKAnnotation {
 	var coordinate: CLLocationCoordinate2D

@@ -1,8 +1,8 @@
 import Foundation
 
-class MRTLink {
-	var lineID: String
-	var to: MRTExit
+public struct MRTLink {
+	public private(set) var lineID: String
+	public private(set) var to: MRTExit
 
 	init(lineID: String, to: MRTExit) {
 		self.lineID = lineID

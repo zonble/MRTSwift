@@ -1,6 +1,6 @@
 import Foundation
 
-var MRTLineNameDictionary = [
+let MRTLineNameDictionary = [
 	"1": "文湖線",
 	"2": "淡水信義線",
 	"3": "松山新店線",
@@ -9,6 +9,6 @@ var MRTLineNameDictionary = [
 	"4B": "蘆洲線",
 	"5": "板南線"]
 
-func MRTLineName(lineID: String) -> String? {
+public func MRTLineName(lineID: String) -> String? {
 	return MRTLineNameDictionary[lineID]
 }
