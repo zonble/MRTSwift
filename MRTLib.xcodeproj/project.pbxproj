@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D42E55BB1FF40FD300177DF3 /* MRTLibTV.h in Headers */ = {isa = PBXBuildFile; fileRef = D42E55B91FF40FD300177DF3 /* MRTLibTV.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D42E55BF1FF40FE400177DF3 /* address.txt in Resources */ = {isa = PBXBuildFile; fileRef = D4F2C0851FF3FE0D00E83271 /* address.txt */; };
+		D42E55C01FF40FE400177DF3 /* data.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D4F2C0881FF3FE0D00E83271 /* data.sqlite */; };
+		D42E55C11FF40FE400177DF3 /* data.txt in Resources */ = {isa = PBXBuildFile; fileRef = D4F2C0891FF3FE0D00E83271 /* data.txt */; };
+		D42E55C21FF40FE400177DF3 /* MRTExit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F2C08D1FF3FE0D00E83271 /* MRTExit.swift */; };
+		D42E55C31FF40FE400177DF3 /* MRTHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F2C0841FF3FE0D00E83271 /* MRTHelper.swift */; };
+		D42E55C41FF40FE400177DF3 /* MRTLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F2C0871FF3FE0D00E83271 /* MRTLink.swift */; };
+		D42E55C51FF40FE400177DF3 /* MRTMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F2C0861FF3FE0D00E83271 /* MRTMap.swift */; };
+		D42E55C61FF40FE400177DF3 /* MRTPriceDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F2C08B1FF3FE0D00E83271 /* MRTPriceDatabase.swift */; };
+		D42E55C71FF40FE400177DF3 /* MRTRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F2C0831FF3FE0D00E83271 /* MRTRoute.swift */; };
 		D4F2C07D1FF3FDDB00E83271 /* MRTLib.h in Headers */ = {isa = PBXBuildFile; fileRef = D4F2C07B1FF3FDDB00E83271 /* MRTLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D4F2C08E1FF3FE0D00E83271 /* MRTRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F2C0831FF3FE0D00E83271 /* MRTRoute.swift */; };
 		D4F2C08F1FF3FE0D00E83271 /* MRTHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F2C0841FF3FE0D00E83271 /* MRTHelper.swift */; };
@@ -22,6 +32,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D42E55B71FF40FD300177DF3 /* MRTLibTV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MRTLibTV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D42E55B91FF40FD300177DF3 /* MRTLibTV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MRTLibTV.h; sourceTree = "<group>"; };
+		D42E55BA1FF40FD300177DF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4F2C0781FF3FDDB00E83271 /* MRTLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MRTLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4F2C07B1FF3FDDB00E83271 /* MRTLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MRTLib.h; sourceTree = "<group>"; };
 		D4F2C07C1FF3FDDB00E83271 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -39,6 +52,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D42E55B31FF40FD300177DF3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D4F2C0741FF3FDDB00E83271 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -50,10 +70,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D42E55B81FF40FD300177DF3 /* MRTLibTV */ = {
+			isa = PBXGroup;
+			children = (
+				D42E55B91FF40FD300177DF3 /* MRTLibTV.h */,
+				D42E55BA1FF40FD300177DF3 /* Info.plist */,
+			);
+			path = MRTLibTV;
+			sourceTree = "<group>";
+		};
 		D4F2C06E1FF3FDDB00E83271 = {
 			isa = PBXGroup;
 			children = (
 				D4F2C07A1FF3FDDB00E83271 /* MRTLib */,
+				D42E55B81FF40FD300177DF3 /* MRTLibTV */,
 				D4F2C0791FF3FDDB00E83271 /* Products */,
 				D4F2C09F1FF3FEA900E83271 /* Frameworks */,
 			);
@@ -63,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				D4F2C0781FF3FDDB00E83271 /* MRTLib.framework */,
+				D42E55B71FF40FD300177DF3 /* MRTLibTV.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -97,6 +128,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		D42E55B41FF40FD300177DF3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D42E55BB1FF40FD300177DF3 /* MRTLibTV.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D4F2C0751FF3FDDB00E83271 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -109,6 +148,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		D42E55B61FF40FD300177DF3 /* MRTLibTV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D42E55BE1FF40FD300177DF3 /* Build configuration list for PBXNativeTarget "MRTLibTV" */;
+			buildPhases = (
+				D42E55B21FF40FD300177DF3 /* Sources */,
+				D42E55B31FF40FD300177DF3 /* Frameworks */,
+				D42E55B41FF40FD300177DF3 /* Headers */,
+				D42E55B51FF40FD300177DF3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MRTLibTV;
+			productName = MRTLibTV;
+			productReference = D42E55B71FF40FD300177DF3 /* MRTLibTV.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		D4F2C0771FF3FDDB00E83271 /* MRTLib */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D4F2C0801FF3FDDB00E83271 /* Build configuration list for PBXNativeTarget "MRTLib" */;
@@ -136,6 +193,10 @@
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Weizhong Yang";
 				TargetAttributes = {
+					D42E55B61FF40FD300177DF3 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
 					D4F2C0771FF3FDDB00E83271 = {
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 0920;
@@ -156,11 +217,22 @@
 			projectRoot = "";
 			targets = (
 				D4F2C0771FF3FDDB00E83271 /* MRTLib */,
+				D42E55B61FF40FD300177DF3 /* MRTLibTV */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D42E55B51FF40FD300177DF3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D42E55BF1FF40FE400177DF3 /* address.txt in Resources */,
+				D42E55C11FF40FE400177DF3 /* data.txt in Resources */,
+				D42E55C01FF40FE400177DF3 /* data.sqlite in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D4F2C0761FF3FDDB00E83271 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -174,6 +246,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D42E55B21FF40FD300177DF3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D42E55C51FF40FE400177DF3 /* MRTMap.swift in Sources */,
+				D42E55C61FF40FE400177DF3 /* MRTPriceDatabase.swift in Sources */,
+				D42E55C21FF40FE400177DF3 /* MRTExit.swift in Sources */,
+				D42E55C31FF40FE400177DF3 /* MRTHelper.swift in Sources */,
+				D42E55C41FF40FE400177DF3 /* MRTLink.swift in Sources */,
+				D42E55C71FF40FE400177DF3 /* MRTRoute.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D4F2C0731FF3FDDB00E83271 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -190,6 +275,52 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		D42E55BC1FF40FD300177DF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = X29ZB2LBKB;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = MRTLibTV/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.zonble.MRTLibTV;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Debug;
+		};
+		D42E55BD1FF40FD300177DF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = X29ZB2LBKB;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = MRTLibTV/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.zonble.MRTLibTV;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Release;
+		};
 		D4F2C07E1FF3FDDB00E83271 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -351,6 +482,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D42E55BE1FF40FD300177DF3 /* Build configuration list for PBXNativeTarget "MRTLibTV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D42E55BC1FF40FD300177DF3 /* Debug */,
+				D42E55BD1FF40FD300177DF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D4F2C0721FF3FDDB00E83271 /* Build configuration list for PBXProject "MRTLib" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
