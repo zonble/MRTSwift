@@ -10,4 +10,3 @@ FOUNDATION_EXPORT const unsigned char MRTLibTVVersionString[];
 
 #import "sqlite3.h"
 #import <time.h>
-

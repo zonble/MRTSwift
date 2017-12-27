@@ -17,6 +17,16 @@
 		D42E55C51FF40FE400177DF3 /* MRTMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F2C0861FF3FE0D00E83271 /* MRTMap.swift */; };
 		D42E55C61FF40FE400177DF3 /* MRTPriceDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F2C08B1FF3FE0D00E83271 /* MRTPriceDatabase.swift */; };
 		D42E55C71FF40FE400177DF3 /* MRTRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F2C0831FF3FE0D00E83271 /* MRTRoute.swift */; };
+		D42E55D11FF410FB00177DF3 /* MRTLibMac.h in Headers */ = {isa = PBXBuildFile; fileRef = D42E55CF1FF410FB00177DF3 /* MRTLibMac.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D42E55D51FF4111000177DF3 /* address.txt in Resources */ = {isa = PBXBuildFile; fileRef = D4F2C0851FF3FE0D00E83271 /* address.txt */; };
+		D42E55D61FF4111000177DF3 /* data.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D4F2C0881FF3FE0D00E83271 /* data.sqlite */; };
+		D42E55D71FF4111000177DF3 /* data.txt in Resources */ = {isa = PBXBuildFile; fileRef = D4F2C0891FF3FE0D00E83271 /* data.txt */; };
+		D42E55D81FF4111000177DF3 /* MRTExit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F2C08D1FF3FE0D00E83271 /* MRTExit.swift */; };
+		D42E55D91FF4111000177DF3 /* MRTHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F2C0841FF3FE0D00E83271 /* MRTHelper.swift */; };
+		D42E55DA1FF4111000177DF3 /* MRTLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F2C0871FF3FE0D00E83271 /* MRTLink.swift */; };
+		D42E55DB1FF4111000177DF3 /* MRTMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F2C0861FF3FE0D00E83271 /* MRTMap.swift */; };
+		D42E55DC1FF4111000177DF3 /* MRTPriceDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F2C08B1FF3FE0D00E83271 /* MRTPriceDatabase.swift */; };
+		D42E55DD1FF4111000177DF3 /* MRTRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F2C0831FF3FE0D00E83271 /* MRTRoute.swift */; };
 		D4F2C07D1FF3FDDB00E83271 /* MRTLib.h in Headers */ = {isa = PBXBuildFile; fileRef = D4F2C07B1FF3FDDB00E83271 /* MRTLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D4F2C08E1FF3FE0D00E83271 /* MRTRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F2C0831FF3FE0D00E83271 /* MRTRoute.swift */; };
 		D4F2C08F1FF3FE0D00E83271 /* MRTHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F2C0841FF3FE0D00E83271 /* MRTHelper.swift */; };
@@ -25,7 +35,6 @@
 		D4F2C0921FF3FE0D00E83271 /* MRTLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F2C0871FF3FE0D00E83271 /* MRTLink.swift */; };
 		D4F2C0931FF3FE0D00E83271 /* data.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D4F2C0881FF3FE0D00E83271 /* data.sqlite */; };
 		D4F2C0941FF3FE0D00E83271 /* data.txt in Resources */ = {isa = PBXBuildFile; fileRef = D4F2C0891FF3FE0D00E83271 /* data.txt */; };
-		D4F2C0951FF3FE0D00E83271 /* MRTLib.h in Headers */ = {isa = PBXBuildFile; fileRef = D4F2C08A1FF3FE0D00E83271 /* MRTLib.h */; };
 		D4F2C0961FF3FE0D00E83271 /* MRTPriceDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F2C08B1FF3FE0D00E83271 /* MRTPriceDatabase.swift */; };
 		D4F2C0981FF3FE0D00E83271 /* MRTExit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F2C08D1FF3FE0D00E83271 /* MRTExit.swift */; };
 		D4F2C0A11FF3FEA900E83271 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D4F2C0A01FF3FEA900E83271 /* libsqlite3.tbd */; };
@@ -35,6 +44,9 @@
 		D42E55B71FF40FD300177DF3 /* MRTLibTV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MRTLibTV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D42E55B91FF40FD300177DF3 /* MRTLibTV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MRTLibTV.h; sourceTree = "<group>"; };
 		D42E55BA1FF40FD300177DF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D42E55CD1FF410FB00177DF3 /* MRTLibMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MRTLibMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D42E55CF1FF410FB00177DF3 /* MRTLibMac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MRTLibMac.h; sourceTree = "<group>"; };
+		D42E55D01FF410FB00177DF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4F2C0781FF3FDDB00E83271 /* MRTLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MRTLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4F2C07B1FF3FDDB00E83271 /* MRTLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MRTLib.h; sourceTree = "<group>"; };
 		D4F2C07C1FF3FDDB00E83271 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,7 +57,6 @@
 		D4F2C0871FF3FE0D00E83271 /* MRTLink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRTLink.swift; sourceTree = "<group>"; };
 		D4F2C0881FF3FE0D00E83271 /* data.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = data.sqlite; sourceTree = "<group>"; };
 		D4F2C0891FF3FE0D00E83271 /* data.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = data.txt; sourceTree = "<group>"; };
-		D4F2C08A1FF3FE0D00E83271 /* MRTLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRTLib.h; sourceTree = "<group>"; };
 		D4F2C08B1FF3FE0D00E83271 /* MRTPriceDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRTPriceDatabase.swift; sourceTree = "<group>"; };
 		D4F2C08D1FF3FE0D00E83271 /* MRTExit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRTExit.swift; sourceTree = "<group>"; };
 		D4F2C0A01FF3FEA900E83271 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
@@ -53,6 +64,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		D42E55B31FF40FD300177DF3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D42E55C91FF410FB00177DF3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -79,11 +97,21 @@
 			path = MRTLibTV;
 			sourceTree = "<group>";
 		};
+		D42E55CE1FF410FB00177DF3 /* MRTLibMac */ = {
+			isa = PBXGroup;
+			children = (
+				D42E55CF1FF410FB00177DF3 /* MRTLibMac.h */,
+				D42E55D01FF410FB00177DF3 /* Info.plist */,
+			);
+			path = MRTLibMac;
+			sourceTree = "<group>";
+		};
 		D4F2C06E1FF3FDDB00E83271 = {
 			isa = PBXGroup;
 			children = (
 				D4F2C07A1FF3FDDB00E83271 /* MRTLib */,
 				D42E55B81FF40FD300177DF3 /* MRTLibTV */,
+				D42E55CE1FF410FB00177DF3 /* MRTLibMac */,
 				D4F2C0791FF3FDDB00E83271 /* Products */,
 				D4F2C09F1FF3FEA900E83271 /* Frameworks */,
 			);
@@ -94,6 +122,7 @@
 			children = (
 				D4F2C0781FF3FDDB00E83271 /* MRTLib.framework */,
 				D42E55B71FF40FD300177DF3 /* MRTLibTV.framework */,
+				D42E55CD1FF410FB00177DF3 /* MRTLibMac.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,7 +130,6 @@
 		D4F2C07A1FF3FDDB00E83271 /* MRTLib */ = {
 			isa = PBXGroup;
 			children = (
-				D4F2C08A1FF3FE0D00E83271 /* MRTLib.h */,
 				D4F2C0851FF3FE0D00E83271 /* address.txt */,
 				D4F2C0881FF3FE0D00E83271 /* data.sqlite */,
 				D4F2C0891FF3FE0D00E83271 /* data.txt */,
@@ -136,11 +164,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D42E55CA1FF410FB00177DF3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D42E55D11FF410FB00177DF3 /* MRTLibMac.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D4F2C0751FF3FDDB00E83271 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4F2C0951FF3FE0D00E83271 /* MRTLib.h in Headers */,
 				D4F2C07D1FF3FDDB00E83271 /* MRTLib.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -164,6 +199,24 @@
 			name = MRTLibTV;
 			productName = MRTLibTV;
 			productReference = D42E55B71FF40FD300177DF3 /* MRTLibTV.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D42E55CC1FF410FB00177DF3 /* MRTLibMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D42E55D21FF410FB00177DF3 /* Build configuration list for PBXNativeTarget "MRTLibMac" */;
+			buildPhases = (
+				D42E55C81FF410FB00177DF3 /* Sources */,
+				D42E55C91FF410FB00177DF3 /* Frameworks */,
+				D42E55CA1FF410FB00177DF3 /* Headers */,
+				D42E55CB1FF410FB00177DF3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MRTLibMac;
+			productName = MRTLibMac;
+			productReference = D42E55CD1FF410FB00177DF3 /* MRTLibMac.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		D4F2C0771FF3FDDB00E83271 /* MRTLib */ = {
@@ -197,6 +250,10 @@
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
+					D42E55CC1FF410FB00177DF3 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
 					D4F2C0771FF3FDDB00E83271 = {
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 0920;
@@ -218,6 +275,7 @@
 			targets = (
 				D4F2C0771FF3FDDB00E83271 /* MRTLib */,
 				D42E55B61FF40FD300177DF3 /* MRTLibTV */,
+				D42E55CC1FF410FB00177DF3 /* MRTLibMac */,
 			);
 		};
 /* End PBXProject section */
@@ -230,6 +288,16 @@
 				D42E55BF1FF40FE400177DF3 /* address.txt in Resources */,
 				D42E55C11FF40FE400177DF3 /* data.txt in Resources */,
 				D42E55C01FF40FE400177DF3 /* data.sqlite in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D42E55CB1FF410FB00177DF3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D42E55D51FF4111000177DF3 /* address.txt in Resources */,
+				D42E55D71FF4111000177DF3 /* data.txt in Resources */,
+				D42E55D61FF4111000177DF3 /* data.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +324,19 @@
 				D42E55C31FF40FE400177DF3 /* MRTHelper.swift in Sources */,
 				D42E55C41FF40FE400177DF3 /* MRTLink.swift in Sources */,
 				D42E55C71FF40FE400177DF3 /* MRTRoute.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D42E55C81FF410FB00177DF3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D42E55DB1FF4111000177DF3 /* MRTMap.swift in Sources */,
+				D42E55DC1FF4111000177DF3 /* MRTPriceDatabase.swift in Sources */,
+				D42E55D81FF4111000177DF3 /* MRTExit.swift in Sources */,
+				D42E55D91FF4111000177DF3 /* MRTHelper.swift in Sources */,
+				D42E55DA1FF4111000177DF3 /* MRTLink.swift in Sources */,
+				D42E55DD1FF4111000177DF3 /* MRTRoute.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,6 +399,54 @@
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Release;
+		};
+		D42E55D31FF410FB00177DF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = X29ZB2LBKB;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = MRTLibMac/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = net.zonble.MRTLibMac;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		D42E55D41FF410FB00177DF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = X29ZB2LBKB;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = MRTLibMac/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = net.zonble.MRTLibMac;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -487,6 +616,15 @@
 			buildConfigurations = (
 				D42E55BC1FF40FD300177DF3 /* Debug */,
 				D42E55BD1FF40FD300177DF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D42E55D21FF410FB00177DF3 /* Build configuration list for PBXNativeTarget "MRTLibMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D42E55D31FF410FB00177DF3 /* Debug */,
+				D42E55D41FF410FB00177DF3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
