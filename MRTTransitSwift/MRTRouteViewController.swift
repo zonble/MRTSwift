@@ -28,6 +28,9 @@ class MRTRouteViewController: UIViewController, UIActionSheetDelegate {
 		segmentedControl.selectedSegmentIndex = 0
 		tableViewController.view.frame = self.view.bounds
 		tableViewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+		if #available(iOS 11.0, *) {
+			self.navigationItem.largeTitleDisplayMode = .never
+		}
 		self.view.addSubview(tableViewController.view)
 		self.title = nil
 	}

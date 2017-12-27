@@ -2,10 +2,10 @@ import UIKit
 import MRTLib
 
 protocol MRTExitPickerDelegate {
-	func exitPicker(picker: ExitPicker, didSelectStationName name: String)
+	func exitPicker(picker: MRTExitPicker, didSelectStationName name: String)
 }
 
-class ExitPicker: UITableViewController {
+class MRTExitPicker: UITableViewController {
 	var delegate: MRTExitPickerDelegate?
 	var selectedIndexPath: IndexPath?
 
@@ -24,7 +24,6 @@ class ExitPicker: UITableViewController {
 	func lineIDWithSection(section: Int) -> String? {
 		return ["1", "2", "3", "4", "4A", "4B", "5"][section]
 	}
-
 
 	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		let lineID = lineIDWithSection(section: section)!

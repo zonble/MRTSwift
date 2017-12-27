@@ -33,8 +33,9 @@ class MRTRouteTableViewController: UITableViewController {
 			if let route = self.route {
 				let routeSection = route.transitions[indexPath.section]
 				let (lineID, from, to) = routeSection[indexPath.row]
-				cell.textLabel?.text = "\(from.name) - \(to.name)"
-				cell.detailTextLabel!.text = MRTLineName(lineID: lineID)
+				cell.textLabel?.text = indexPath.row == 0 ? "\(from.name) - \(to.name)" : to.name
+				cell.detailTextLabel?.text = MRTLineName(lineID: lineID)
+				cell.detailTextLabel?.textColor =  MRTLineColor(lineID: lineID)
 			}
 		}
 		return cell!

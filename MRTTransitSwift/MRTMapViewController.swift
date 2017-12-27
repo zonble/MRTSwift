@@ -18,18 +18,6 @@ class MRTMapViewController: UIViewController, MKMapViewDelegate {
 	var mapView: MKMapView?
 	var routeLines = [MKPolyline: String]()
 
-	class func colorForID(lineID: String) -> UIColor? {
-		let colors = [
-			"1": UIColor(hue: 0.1, saturation: 08, brightness: 0.71, alpha: 0.7),
-			"2": UIColor(hue: 0.97, saturation: 1.0, brightness: 0.85, alpha: 0.7),
-			"3": UIColor(hue: 0.42, saturation: 0.84, brightness: 0.42, alpha: 0.7),
-			"4": UIColor(hue: 0.12, saturation: 0.75, brightness: 0.91, alpha: 0.7),
-			"4A": UIColor(hue: 0.12, saturation: 0.75, brightness: 0.91, alpha: 0.7),
-			"4B": UIColor(hue: 0.12, saturation: 0.75, brightness: 0.91, alpha: 0.7),
-			"5": UIColor(hue: 0.58, saturation: 0.95, brightness: 0.66, alpha: 0.7)]
-		return colors[lineID]
-	}
-
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		if mapView == nil {
@@ -78,8 +66,9 @@ class MRTMapViewController: UIViewController, MKMapViewDelegate {
 		let route = overlay as! MKPolyline
 		let routeRenderer = MKPolylineRenderer(polyline: route)
 		if let lineID = self.routeLines[route] {
-			let color = MRTMapViewController.colorForID(lineID: lineID)
-			routeRenderer.strokeColor = color
+			if let color = MRTLineColor(lineID: lineID) {
+				routeRenderer.strokeColor = color
+			}
 			routeRenderer.lineWidth = 1
 		}
 		else {

@@ -4,8 +4,8 @@ import MRTLib
 class MRTRootTableViewController: UITableViewController {
 	var from: String?
 	var to: String?
-	var fromPicker = ExitPicker(style: .plain)
-	var toPicker = ExitPicker(style: .plain)
+	var fromPicker = MRTExitPicker(style: .plain)
+	var toPicker = MRTExitPicker(style: .plain)
 	var suggestedRoutes = [(String, MRTRoute)]()
 	var onewayFare: Int32?
 	var easycardFare: Int32?
@@ -159,7 +159,7 @@ extension MRTRootTableViewController: MRTExitPickerDelegate {
 		}
 	}
 
-	func exitPicker(picker: ExitPicker, didSelectStationName name: String) {
+	func exitPicker(picker: MRTExitPicker, didSelectStationName name: String) {
 		if picker == self.fromPicker {
 			self.from = name
 		} else if picker == self.toPicker {
@@ -176,27 +176,27 @@ extension MRTRootTableViewController: MRTExitPickerDelegate {
 		self.dismiss(animated: true, completion: {
 			self.suggestedRoutes.removeAll(keepingCapacity: false)
 			self.tableView.reloadData()
-			let routes = MRTMap.sharedMap.findRoutes(fromID: self.from!, toID: self.to!)
-			if routes == nil {
+			guard let routes = MRTMap.sharedMap.findRoutes(fromID: self.from!, toID: self.to!), routes.count > 0 else {
 				return
 			}
 
-			let routesSortedByExitcount = routes!.sorted(by: {
+			let routesSortedByExitcount = routes.sorted() {
 				if $0.links.count == $1.links.count {
 					return $0.transitions.count < $1.transitions.count
 				}
 				return $0.links.count < $1.links.count
-			})
+			}
 
-			let routesSortedByTransitionCount = routes!.sorted(by: {
+			let routesSortedByTransitionCount = routes.sorted() {
 				if $0.transitions.count == $1.transitions.count {
 					return $0.links.count < $1.links.count
 				}
 				return $0.transitions.count < $1.transitions.count
-			})
+			}
 			let routeWithFewestExits = routesSortedByExitcount[0]
 			let routeWithFewestTransitions = routesSortedByTransitionCount[0]
 			var routeToSpeakOut: MRTRoute?
+
 			if (routeWithFewestExits === routeWithFewestTransitions) {
 				self.suggestedRoutes.append(("建議路線", routeWithFewestExits))
 				routeToSpeakOut = routeWithFewestExits
@@ -217,7 +217,7 @@ extension MRTRootTableViewController: MRTExitPickerDelegate {
 				}
 			}
 
-			var fares = MRTPriceDatabase.sharedDatabase.price(fromStationName: self.from!, toStationName: self.to!)
+			var fares = MRTPriceDatabase.shared.price(fromStationName: self.from!, toStationName: self.to!)
 			let (v1, v2, v3, v4) = fares[0]
 			self.onewayFare = v1
 			self.easycardFare = v2

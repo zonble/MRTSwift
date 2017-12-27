@@ -45,7 +45,7 @@ public class MRTMap {
 
 			if mapDict[stationName] === nil {
 				let exit = MRTExit(name: stationName)
-				exit.address = address
+				exit.address = address.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).replacingOccurrences(of: "<br>", with: "\n")
 				exit.logitude = (logitude as NSString).floatValue
 				exit.latitude = (latitude as NSString).floatValue
 				mapDict[stationName] = exit

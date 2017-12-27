@@ -10,15 +10,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		window = UIWindow(frame: UIScreen.main.bounds)
 		let rootVC = MRTRootTableViewController(style: .grouped)
 		splitViewController = UISplitViewController()
-		if splitViewController!.traitCollection.horizontalSizeClass == .regular {
-			splitViewController!.viewControllers = [UINavigationController(rootViewController: rootVC), UIViewController()]
+		let mainNav = UINavigationController(rootViewController: rootVC)
+		if #available(iOS 11.0, *) {
+			mainNav.navigationBar.prefersLargeTitles = true
+		}
+		if splitViewController?.traitCollection.horizontalSizeClass == .regular {
+			splitViewController?.viewControllers = [mainNav, UIViewController()]
 		} else {
-			splitViewController!.viewControllers = [UINavigationController(rootViewController: rootVC)]
+			splitViewController?.viewControllers = [mainNav]
 		}
 
-		splitViewController!.preferredDisplayMode = .allVisible
-		window!.rootViewController = splitViewController
-		window!.makeKeyAndVisible()
+		splitViewController?.preferredDisplayMode = .allVisible
+		window?.rootViewController = splitViewController
+		window?.makeKeyAndVisible()
 		return true
 	}
 }

@@ -1,7 +1,7 @@
 import Foundation
 
 public class MRTPriceDatabase {
-	public static let sharedDatabase = MRTPriceDatabase()
+	public static let shared = MRTPriceDatabase()
 	var db: OpaquePointer? = nil
 
 	init() {
