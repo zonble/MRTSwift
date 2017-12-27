@@ -1,4 +1,9 @@
 import Foundation
+#if os(OSX)
+import AppKit
+#else
+import UIKit
+#endif
 
 let MRTLineNameDictionary = [
 	"1": "文湖線",
