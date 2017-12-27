@@ -3,8 +3,8 @@ import MapKit
 
 class MRTMapViewAnnotation: NSObject, MKAnnotation {
 	var coordinate: CLLocationCoordinate2D
-	var title: String!
-	var subtitle: String!
+	var title: String?
+	var subtitle: String?
 
 	init(coordinate: CLLocationCoordinate2D, title: String, subtitle: String) {
 		self.coordinate = coordinate
@@ -60,8 +60,8 @@ class MRTMapViewController: UIViewController, MKMapViewDelegate {
 		}
 	}
 
-	func mapView(_ mapView: MKMapView!, viewFor annotation: MKAnnotation!) -> MKAnnotationView! {
-		var view = mapView!.dequeueReusableAnnotationView(withIdentifier: "cell")
+	func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+		var view = mapView.dequeueReusableAnnotationView(withIdentifier: "cell")
 		if view == nil {
 			view = MKAnnotationView(annotation: annotation, reuseIdentifier: "cell")
 			view!.canShowCallout = true
@@ -73,17 +73,19 @@ class MRTMapViewController: UIViewController, MKMapViewDelegate {
 		return view
 	}
 
-	func mapView(mapView: MKMapView!, rendererForOverlay overlay: MKOverlay!) -> MKOverlayRenderer! {
-		if overlay.isKind(of: MKPolyline.self) {
-			let route = overlay as! MKPolyline
-			let routeRenderer = MKPolylineRenderer(polyline: route)
-			let lineID = self.routeLines[route]!
-			var color = MRTMapViewController.colorForID(lineID: lineID)
-			routeRenderer.strokeColor = color ?? UIColor(white: 0.0, alpha: 0.5)
-			routeRenderer.lineWidth = color != nil ? 4 : 7
-			return routeRenderer
+	func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+		let route = overlay as! MKPolyline
+		let routeRenderer = MKPolylineRenderer(polyline: route)
+		if let lineID = self.routeLines[route] {
+			let color = MRTMapViewController.colorForID(lineID: lineID)
+			routeRenderer.strokeColor = color
+			routeRenderer.lineWidth = 1
 		}
-		return nil
+		else {
+			routeRenderer.strokeColor = UIColor(white: 0.0, alpha: 0.5)
+			routeRenderer.lineWidth = 5
+		}
+		return routeRenderer
 	}
 }
 
@@ -101,14 +103,14 @@ class MRTRouteMapViewController: MRTMapViewController {
 		if let route = self.route {
 			var coordinateArray = [CLLocationCoordinate2D]()
 			let from = route.from
-			var fromCoordinate = CLLocationCoordinate2DMake(CLLocationDegrees(from.logitude!), CLLocationDegrees(from.latitude!))
+			let fromCoordinate = CLLocationCoordinate2DMake(CLLocationDegrees(from.logitude!), CLLocationDegrees(from.latitude!))
 			coordinateArray.append(fromCoordinate)
 			for link in route.links {
 				let station = link.to
-				var coordinate = CLLocationCoordinate2DMake(CLLocationDegrees(station.logitude!), CLLocationDegrees(station.latitude!))
+				let coordinate = CLLocationCoordinate2DMake(CLLocationDegrees(station.logitude!), CLLocationDegrees(station.latitude!))
 				coordinateArray.append(coordinate)
 			}
-			var routeLine = MKPolyline(coordinates: &coordinateArray, count: coordinateArray.count)
+			let routeLine = MKPolyline(coordinates: &coordinateArray, count: coordinateArray.count)
 			self.mapView!.add(routeLine)
 
 		}
