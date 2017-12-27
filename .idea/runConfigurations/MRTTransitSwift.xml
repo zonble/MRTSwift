@@ -1,9 +1,0 @@
-<component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="MRTTransitSwift" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="MRTTransitSwift" TARGET_NAME="MRTTransitSwift" CONFIG_NAME="Debug" SCHEME_NAME="MRTTransitSwift" RUN_TARGET_PROJECT_NAME="MRTTransitSwift" RUN_TARGET_NAME="MRTTransitSwift" MAKE_ACTIVE="TRUE">
-    <envs />
-    <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
-      <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
-    </EXTENSION>
-    <method />
-  </configuration>
-</component>

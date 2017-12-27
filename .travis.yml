@@ -1,2 +1,4 @@
-language: objective-c
-script: xcodebuild -sdk iphonesimulator -arch i386 clean build
+language: swift
+osx_image: xcode9.2
+script:
+  - xcodebuild -project MRTTransitSwift.xcodeproj -scheme MRTTransitSwift
