@@ -1,4 +1,7 @@
 import UIKit
+import AppCenter
+import AppCenterAnalytics
+import AppCenterCrashes
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -23,6 +26,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		splitViewController?.preferredDisplayMode = .allVisible
 		window?.rootViewController = splitViewController
 		window?.makeKeyAndVisible()
+
+		MSAppCenter.start("9d0077d1-f7a6-4ecd-a071-a1d5b8d6a29d", withServices:[ MSAnalytics.self, MSCrashes.self ])
+
 		return true
 	}
 }

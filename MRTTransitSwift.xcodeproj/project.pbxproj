@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A9F8EFF36C5D1EB8E84AC5BE /* Pods_MRTTransitSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3A76D32FBC0247B87E0ACBA /* Pods_MRTTransitSwift.framework */; };
+		AFA18741BCB7CEBE2B700C42 /* Pods_MRTTransitSwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62B550425D89448A333E99A5 /* Pods_MRTTransitSwiftTests.framework */; };
 		D4049E631A24CD3B00AA52E9 /* MRTRouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4049E621A24CD3B00AA52E9 /* MRTRouteViewController.swift */; };
 		D41A5C421A190759005D110B /* MRTRouteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41A5C411A190759005D110B /* MRTRouteTableViewController.swift */; };
 		D42E55EC1FF4127400177DF3 /* MRTLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D42E55E71FF4125800177DF3 /* MRTLib.framework */; };
@@ -74,6 +76,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		62B550425D89448A333E99A5 /* Pods_MRTTransitSwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MRTTransitSwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3A76D32FBC0247B87E0ACBA /* Pods_MRTTransitSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MRTTransitSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4049E621A24CD3B00AA52E9 /* MRTRouteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRTRouteViewController.swift; sourceTree = "<group>"; };
 		D41A5C411A190759005D110B /* MRTRouteTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRTRouteTableViewController.swift; sourceTree = "<group>"; };
 		D42E55E01FF4125800177DF3 /* MRTLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MRTLib.xcodeproj; path = Sources/MRTLib.xcodeproj; sourceTree = "<group>"; };
@@ -89,6 +93,10 @@
 		D4C8DC5D1A18F701009D7F66 /* MRTRootTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRTRootTableViewController.swift; sourceTree = "<group>"; };
 		D4C8DC5F1A18F7F0009D7F66 /* MRTExitPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRTExitPicker.swift; sourceTree = "<group>"; };
 		D4D9A2521A1A6C7C005D6C27 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
+		DE296D6A95CB2FEE33375AFB /* Pods-MRTTransitSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MRTTransitSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MRTTransitSwift/Pods-MRTTransitSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		E56E2259CD62A31E5E1CE559 /* Pods-MRTTransitSwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MRTTransitSwiftTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MRTTransitSwiftTests/Pods-MRTTransitSwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E866E2A31B29D4F5A914481E /* Pods-MRTTransitSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MRTTransitSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-MRTTransitSwift/Pods-MRTTransitSwift.release.xcconfig"; sourceTree = "<group>"; };
+		FACE33C549A1D74700A80F4F /* Pods-MRTTransitSwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MRTTransitSwiftTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MRTTransitSwiftTests/Pods-MRTTransitSwiftTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +105,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D42E55EC1FF4127400177DF3 /* MRTLib.framework in Frameworks */,
+				A9F8EFF36C5D1EB8E84AC5BE /* Pods_MRTTransitSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,12 +113,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFA18741BCB7CEBE2B700C42 /* Pods_MRTTransitSwiftTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		44F0C593EE589A56E0422CDF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DE296D6A95CB2FEE33375AFB /* Pods-MRTTransitSwift.debug.xcconfig */,
+				E866E2A31B29D4F5A914481E /* Pods-MRTTransitSwift.release.xcconfig */,
+				E56E2259CD62A31E5E1CE559 /* Pods-MRTTransitSwiftTests.debug.xcconfig */,
+				FACE33C549A1D74700A80F4F /* Pods-MRTTransitSwiftTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8B580587287C1961C93CD515 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D3A76D32FBC0247B87E0ACBA /* Pods_MRTTransitSwift.framework */,
+				62B550425D89448A333E99A5 /* Pods_MRTTransitSwiftTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D42E55E11FF4125800177DF3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +157,8 @@
 				D4BF109D1A18EB10008CF67E /* MRTTransitSwift */,
 				D4BF10B31A18EB10008CF67E /* MRTTransitSwiftTests */,
 				D4BF109C1A18EB10008CF67E /* Products */,
+				44F0C593EE589A56E0422CDF /* Pods */,
+				8B580587287C1961C93CD515 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -188,10 +220,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D4BF10BA1A18EB10008CF67E /* Build configuration list for PBXNativeTarget "MRTTransitSwift" */;
 			buildPhases = (
+				0E0BAB9AA97873622E31E170 /* [CP] Check Pods Manifest.lock */,
 				D4BF10971A18EB10008CF67E /* Sources */,
 				D4BF10981A18EB10008CF67E /* Frameworks */,
 				D4BF10991A18EB10008CF67E /* Resources */,
 				D4F2C0AE1FF401D700E83271 /* Embed Frameworks */,
+				0D539CD0F9EF119DD11073F0 /* [CP] Embed Pods Frameworks */,
+				8B6AF40D4C6160E29146096B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -207,9 +242,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D4BF10BD1A18EB10008CF67E /* Build configuration list for PBXNativeTarget "MRTTransitSwiftTests" */;
 			buildPhases = (
+				2F2AD59EECC77C35CB9FC0C5 /* [CP] Check Pods Manifest.lock */,
 				D4BF10AC1A18EB10008CF67E /* Sources */,
 				D4BF10AD1A18EB10008CF67E /* Frameworks */,
 				D4BF10AE1A18EB10008CF67E /* Resources */,
+				93D030EA3121C3C643D95193 /* [CP] Embed Pods Frameworks */,
+				241D39E60AFAC823988A0908 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -234,6 +272,7 @@
 						CreatedOnToolsVersion = 6.1;
 						DevelopmentTeam = X29ZB2LBKB;
 						LastSwiftMigration = 0920;
+						ProvisioningStyle = Manual;
 					};
 					D4BF10AF1A18EB10008CF67E = {
 						CreatedOnToolsVersion = 6.1;
@@ -310,6 +349,105 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0D539CD0F9EF119DD11073F0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MRTTransitSwift/Pods-MRTTransitSwift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0E0BAB9AA97873622E31E170 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MRTTransitSwift-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		241D39E60AFAC823988A0908 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MRTTransitSwiftTests/Pods-MRTTransitSwiftTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2F2AD59EECC77C35CB9FC0C5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MRTTransitSwiftTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8B6AF40D4C6160E29146096B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MRTTransitSwift/Pods-MRTTransitSwift-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		93D030EA3121C3C643D95193 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MRTTransitSwiftTests/Pods-MRTTransitSwiftTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D4BF10971A18EB10008CF67E /* Sources */ = {
@@ -442,15 +580,19 @@
 		};
 		D4BF10BB1A18EB10008CF67E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE296D6A95CB2FEE33375AFB /* Pods-MRTTransitSwift.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = X29ZB2LBKB;
 				INFOPLIST_FILE = MRTTransitSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "ba98cc6e-55d0-4d58-a5f3-a2831b456e18";
+				PROVISIONING_PROFILE_SPECIFIER = "zonble dev";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -459,15 +601,19 @@
 		};
 		D4BF10BC1A18EB10008CF67E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E866E2A31B29D4F5A914481E /* Pods-MRTTransitSwift.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = X29ZB2LBKB;
 				INFOPLIST_FILE = MRTTransitSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "f2601cab-4759-4c25-89eb-c34b203a4b0c";
+				PROVISIONING_PROFILE_SPECIFIER = "zonble appstore";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -476,6 +622,7 @@
 		};
 		D4BF10BE1A18EB10008CF67E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E56E2259CD62A31E5E1CE559 /* Pods-MRTTransitSwiftTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -497,6 +644,7 @@
 		};
 		D4BF10BF1A18EB10008CF67E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FACE33C549A1D74700A80F4F /* Pods-MRTTransitSwiftTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
