@@ -69,7 +69,7 @@ class MRTRootTableViewController: UITableViewController {
 			cell = UITableViewCell(style: .value1, reuseIdentifier: "Cell")
 		}
 		if let cell = cell {
-			cell.textLabel?.textColor = UIColor.black
+			cell.textLabel?.textColor = UIColor.label
 			cell.textLabel?.textAlignment = .left
 			cell.selectionStyle = .blue
 			cell.detailTextLabel!.text = ""
@@ -217,7 +217,7 @@ extension MRTRootTableViewController: MRTExitPickerDelegate {
 				}
 			}
 
-			var fares = MRTPriceDatabase.shared.price(fromStationName: self.from!, toStationName: self.to!)
+			let fares = MRTPriceDatabase.shared.price(fromStationName: self.from!, toStationName: self.to!)
 			let (v1, v2, v3, v4) = fares[0]
 			self.onewayFare = v1
 			self.easycardFare = v2

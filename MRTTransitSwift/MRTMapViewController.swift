@@ -14,12 +14,15 @@ class MRTMapViewAnnotation: NSObject, MKAnnotation {
 	}
 }
 
+private let defaultLocation: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 25.048780, longitude: 121.500867)
+
 class MRTMapViewController: UIViewController, MKMapViewDelegate {
 	var mapView: MKMapView?
 	var routeLines = [MKPolyline: String]()
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		self.view.backgroundColor = UIColor.systemBackground
 		if mapView == nil {
 			self.mapView = MKMapView()
 			self.mapView!.frame = self.view.bounds
@@ -43,7 +46,7 @@ class MRTMapViewController: UIViewController, MKMapViewDelegate {
 				routeLines[routeLine] = lineID
 				self.mapView!.add(routeLine)
 			}
-			let startCoord = CLLocationCoordinate2D(latitude: 25.048780, longitude: 121.500867)
+			let startCoord = defaultLocation
 			let region = self.mapView!.regionThatFits(MKCoordinateRegionMakeWithDistance(startCoord, 25000, 25000))
 			self.mapView!.setRegion(region, animated: false)
 		}
@@ -69,7 +72,7 @@ class MRTMapViewController: UIViewController, MKMapViewDelegate {
 			if let color = MRTLineColor(lineID: lineID) {
 				routeRenderer.strokeColor = color
 			}
-			routeRenderer.lineWidth = 1
+			routeRenderer.lineWidth = 3
 		}
 		else {
 			routeRenderer.strokeColor = UIColor(white: 0.0, alpha: 0.5)

@@ -16,10 +16,11 @@ class MRTRouteViewController: UIViewController, UIActionSheetDelegate {
 
 	override func loadView() {
 		self.view = UIScrollView()
-		self.view.backgroundColor = UIColor.lightGray
-		self.automaticallyAdjustsScrollViewInsets = true
-		self.edgesForExtendedLayout = [.left, .right, .bottom]
+		self.view.backgroundColor = UIColor.systemBackground
+//		self.automaticallyAdjustsScrollViewInsets = true
+//		self.edgesForExtendedLayout = [.left, .right, .bottom]
 		self.segmentedControl.frame = CGRect(x: 0, y: 0, width: 200, height: 32)
+		self.navigationController?.navigationBar.barTintColor = UIColor.systemBackground
 	}
 
 	override func viewDidLoad() {
@@ -58,7 +59,7 @@ class MRTRouteViewController: UIViewController, UIActionSheetDelegate {
 		}
 	}
 
-	@objc func changeMapType(sender: AnyObject?) {
+	@objc func changeMapType(sender: Any?) {
 		let actionSheet = UIActionSheet(title: "切斷地圖類型", delegate: self, cancelButtonTitle: "取消", destructiveButtonTitle: nil, otherButtonTitles: "標準", "衛星", "混合")
 		actionSheet.show(in: self.view)
 	}

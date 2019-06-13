@@ -33,7 +33,7 @@ class MRTExitPicker: UITableViewController {
 
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
-		cell?.textLabel?.textColor = UIColor.black
+		cell?.textLabel?.textColor = UIColor.label
 		cell?.textLabel?.textAlignment = .left
 		let lineID = lineIDWithSection(section: indexPath.section)!
 		let exitNames = MRTMap.sharedMap.lines[lineID]!

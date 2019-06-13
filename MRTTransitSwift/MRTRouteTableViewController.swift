@@ -27,7 +27,7 @@ class MRTRouteTableViewController: UITableViewController {
 			cell = UITableViewCell(style: .value1, reuseIdentifier: "Cell")
 		}
 		if let cell = cell {
-			cell.textLabel?.textColor = UIColor.black
+			cell.textLabel?.textColor = UIColor.label
 			cell.textLabel?.textAlignment = .left
 			cell.selectionStyle = .none
 			if let route = self.route {
