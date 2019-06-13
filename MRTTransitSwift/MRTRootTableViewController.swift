@@ -1,5 +1,6 @@
 import UIKit
 import MRTLib
+//import AppCenterAnalytics
 
 class MRTRootTableViewController: UITableViewController {
 	var from: String?
@@ -37,6 +38,8 @@ class MRTRootTableViewController: UITableViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
+//		MSAnalytics.trackEvent("View Root")
+
 		self.title = "台北捷運轉乘"
 		self.formatter.numberStyle = .currency
 		self.formatter.locale = Locale(identifier: "zh_Hant_TW") as Locale!
@@ -127,8 +130,10 @@ class MRTRootTableViewController: UITableViewController {
 		switch indexPath.section {
 		case 0:
 			presentViewController(vc: fromPicker)
+//			MSAnalytics.trackEvent("Select Start")
 		case 1:
 			presentViewController(vc: toPicker)
+//			MSAnalytics.trackEvent("Select End")
 		case 2:
 			let vc = MRTRouteViewController()
 			let (title, route) = self.suggestedRoutes[indexPath.row]
@@ -136,6 +141,7 @@ class MRTRootTableViewController: UITableViewController {
 			vc.route = route
 			let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
 			appDelegate.splitViewController!.showDetailViewController(UINavigationController(rootViewController: vc), sender: self)
+//			MSAnalytics.trackEvent("View Route Detail")
 		default:
 			break
 		}

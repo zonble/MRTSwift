@@ -74,6 +74,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		62B550425D89448A333E99A5 /* Pods_MRTTransitSwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MRTTransitSwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3A76D32FBC0247B87E0ACBA /* Pods_MRTTransitSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MRTTransitSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4049E621A24CD3B00AA52E9 /* MRTRouteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRTRouteViewController.swift; sourceTree = "<group>"; };
 		D41A5C411A190759005D110B /* MRTRouteTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRTRouteTableViewController.swift; sourceTree = "<group>"; };
 		D42E55E01FF4125800177DF3 /* MRTLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MRTLib.xcodeproj; path = Sources/MRTLib.xcodeproj; sourceTree = "<group>"; };
@@ -111,6 +113,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8B580587287C1961C93CD515 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D3A76D32FBC0247B87E0ACBA /* Pods_MRTTransitSwift.framework */,
+				62B550425D89448A333E99A5 /* Pods_MRTTransitSwiftTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D42E55E11FF4125800177DF3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +139,7 @@
 				D4BF109D1A18EB10008CF67E /* MRTTransitSwift */,
 				D4BF10B31A18EB10008CF67E /* MRTTransitSwiftTests */,
 				D4BF109C1A18EB10008CF67E /* Products */,
+				8B580587287C1961C93CD515 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -236,6 +248,7 @@
 						CreatedOnToolsVersion = 6.1;
 						DevelopmentTeam = X29ZB2LBKB;
 						LastSwiftMigration = 0920;
+						ProvisioningStyle = Automatic;
 					};
 					D4BF10AF1A18EB10008CF67E = {
 						CreatedOnToolsVersion = 6.1;
@@ -449,14 +462,19 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MRTTransitSwift/MRTTransitSwift.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DERIVE_UIKITFORMAC_PRODUCT_BUNDLE_IDENTIFIER = YES;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MRTTransitSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "net.zonble.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SUPPORTS_UIKITFORMAC = YES;
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
@@ -470,14 +488,19 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MRTTransitSwift/MRTTransitSwift.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DERIVE_UIKITFORMAC_PRODUCT_BUNDLE_IDENTIFIER = YES;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MRTTransitSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "net.zonble.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SUPPORTS_UIKITFORMAC = YES;
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;

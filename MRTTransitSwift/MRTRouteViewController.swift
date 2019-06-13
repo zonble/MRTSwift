@@ -20,7 +20,7 @@ class MRTRouteViewController: UIViewController, UIActionSheetDelegate {
 //		self.automaticallyAdjustsScrollViewInsets = true
 //		self.edgesForExtendedLayout = [.left, .right, .bottom]
 		self.segmentedControl.frame = CGRect(x: 0, y: 0, width: 200, height: 32)
-		self.navigationController?.navigationBar.barTintColor = UIColor.systemBackground
+//		self.navigationController?.navigationBar.barTintColor = UIColor.systemBackground
 	}
 
 	override func viewDidLoad() {

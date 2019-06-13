@@ -75,7 +75,7 @@ class MRTMapViewController: UIViewController, MKMapViewDelegate {
 			routeRenderer.lineWidth = 3
 		}
 		else {
-			routeRenderer.strokeColor = UIColor(white: 0.0, alpha: 0.5)
+			routeRenderer.strokeColor = UIColor.label
 			routeRenderer.lineWidth = 5
 		}
 		return routeRenderer
